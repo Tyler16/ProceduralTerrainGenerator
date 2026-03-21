@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/ProceduralTerrainGenerator.dir/src/main.cpp.o CMakeFiles/ProceduralTerrainGenerator.dir/src/glad.c.o -o ProceduralTerrainGenerator  /opt/homebrew/lib/libglfw.3.4.dylib /opt/homebrew/lib/libglm.dylib -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo
