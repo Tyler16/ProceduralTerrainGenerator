@@ -9,6 +9,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/tyler/Programming/ProceduralTerrainGenerator/src/glad.c" "CMakeFiles/ProceduralTerrainGenerator.dir/src/glad.c.o" "gcc" "CMakeFiles/ProceduralTerrainGenerator.dir/src/glad.c.o.d"
+  "/Users/tyler/Programming/ProceduralTerrainGenerator/src/Camera.cpp" "CMakeFiles/ProceduralTerrainGenerator.dir/src/Camera.cpp.o" "gcc" "CMakeFiles/ProceduralTerrainGenerator.dir/src/Camera.cpp.o.d"
+  "/Users/tyler/Programming/ProceduralTerrainGenerator/src/Shader.cpp" "CMakeFiles/ProceduralTerrainGenerator.dir/src/Shader.cpp.o" "gcc" "CMakeFiles/ProceduralTerrainGenerator.dir/src/Shader.cpp.o.d"
+  "/Users/tyler/Programming/ProceduralTerrainGenerator/src/ShaderProgram.cpp" "CMakeFiles/ProceduralTerrainGenerator.dir/src/ShaderProgram.cpp.o" "gcc" "CMakeFiles/ProceduralTerrainGenerator.dir/src/ShaderProgram.cpp.o.d"
   "/Users/tyler/Programming/ProceduralTerrainGenerator/src/main.cpp" "CMakeFiles/ProceduralTerrainGenerator.dir/src/main.cpp.o" "gcc" "CMakeFiles/ProceduralTerrainGenerator.dir/src/main.cpp.o.d"
   )
 

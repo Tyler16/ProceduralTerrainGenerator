@@ -86,10 +86,52 @@ CMakeFiles/ProceduralTerrainGenerator.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ProceduralTerrainGenerator.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tyler/Programming/ProceduralTerrainGenerator/src/main.cpp -o CMakeFiles/ProceduralTerrainGenerator.dir/src/main.cpp.s
 
+CMakeFiles/ProceduralTerrainGenerator.dir/src/Shader.cpp.o: CMakeFiles/ProceduralTerrainGenerator.dir/flags.make
+CMakeFiles/ProceduralTerrainGenerator.dir/src/Shader.cpp.o: /Users/tyler/Programming/ProceduralTerrainGenerator/src/Shader.cpp
+CMakeFiles/ProceduralTerrainGenerator.dir/src/Shader.cpp.o: CMakeFiles/ProceduralTerrainGenerator.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ProceduralTerrainGenerator.dir/src/Shader.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProceduralTerrainGenerator.dir/src/Shader.cpp.o -MF CMakeFiles/ProceduralTerrainGenerator.dir/src/Shader.cpp.o.d -o CMakeFiles/ProceduralTerrainGenerator.dir/src/Shader.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/Shader.cpp
+
+CMakeFiles/ProceduralTerrainGenerator.dir/src/Shader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ProceduralTerrainGenerator.dir/src/Shader.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tyler/Programming/ProceduralTerrainGenerator/src/Shader.cpp > CMakeFiles/ProceduralTerrainGenerator.dir/src/Shader.cpp.i
+
+CMakeFiles/ProceduralTerrainGenerator.dir/src/Shader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ProceduralTerrainGenerator.dir/src/Shader.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tyler/Programming/ProceduralTerrainGenerator/src/Shader.cpp -o CMakeFiles/ProceduralTerrainGenerator.dir/src/Shader.cpp.s
+
+CMakeFiles/ProceduralTerrainGenerator.dir/src/ShaderProgram.cpp.o: CMakeFiles/ProceduralTerrainGenerator.dir/flags.make
+CMakeFiles/ProceduralTerrainGenerator.dir/src/ShaderProgram.cpp.o: /Users/tyler/Programming/ProceduralTerrainGenerator/src/ShaderProgram.cpp
+CMakeFiles/ProceduralTerrainGenerator.dir/src/ShaderProgram.cpp.o: CMakeFiles/ProceduralTerrainGenerator.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ProceduralTerrainGenerator.dir/src/ShaderProgram.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProceduralTerrainGenerator.dir/src/ShaderProgram.cpp.o -MF CMakeFiles/ProceduralTerrainGenerator.dir/src/ShaderProgram.cpp.o.d -o CMakeFiles/ProceduralTerrainGenerator.dir/src/ShaderProgram.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/ShaderProgram.cpp
+
+CMakeFiles/ProceduralTerrainGenerator.dir/src/ShaderProgram.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ProceduralTerrainGenerator.dir/src/ShaderProgram.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tyler/Programming/ProceduralTerrainGenerator/src/ShaderProgram.cpp > CMakeFiles/ProceduralTerrainGenerator.dir/src/ShaderProgram.cpp.i
+
+CMakeFiles/ProceduralTerrainGenerator.dir/src/ShaderProgram.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ProceduralTerrainGenerator.dir/src/ShaderProgram.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tyler/Programming/ProceduralTerrainGenerator/src/ShaderProgram.cpp -o CMakeFiles/ProceduralTerrainGenerator.dir/src/ShaderProgram.cpp.s
+
+CMakeFiles/ProceduralTerrainGenerator.dir/src/Camera.cpp.o: CMakeFiles/ProceduralTerrainGenerator.dir/flags.make
+CMakeFiles/ProceduralTerrainGenerator.dir/src/Camera.cpp.o: /Users/tyler/Programming/ProceduralTerrainGenerator/src/Camera.cpp
+CMakeFiles/ProceduralTerrainGenerator.dir/src/Camera.cpp.o: CMakeFiles/ProceduralTerrainGenerator.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ProceduralTerrainGenerator.dir/src/Camera.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProceduralTerrainGenerator.dir/src/Camera.cpp.o -MF CMakeFiles/ProceduralTerrainGenerator.dir/src/Camera.cpp.o.d -o CMakeFiles/ProceduralTerrainGenerator.dir/src/Camera.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/Camera.cpp
+
+CMakeFiles/ProceduralTerrainGenerator.dir/src/Camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ProceduralTerrainGenerator.dir/src/Camera.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tyler/Programming/ProceduralTerrainGenerator/src/Camera.cpp > CMakeFiles/ProceduralTerrainGenerator.dir/src/Camera.cpp.i
+
+CMakeFiles/ProceduralTerrainGenerator.dir/src/Camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ProceduralTerrainGenerator.dir/src/Camera.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tyler/Programming/ProceduralTerrainGenerator/src/Camera.cpp -o CMakeFiles/ProceduralTerrainGenerator.dir/src/Camera.cpp.s
+
 CMakeFiles/ProceduralTerrainGenerator.dir/src/glad.c.o: CMakeFiles/ProceduralTerrainGenerator.dir/flags.make
 CMakeFiles/ProceduralTerrainGenerator.dir/src/glad.c.o: /Users/tyler/Programming/ProceduralTerrainGenerator/src/glad.c
 CMakeFiles/ProceduralTerrainGenerator.dir/src/glad.c.o: CMakeFiles/ProceduralTerrainGenerator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ProceduralTerrainGenerator.dir/src/glad.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ProceduralTerrainGenerator.dir/src/glad.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ProceduralTerrainGenerator.dir/src/glad.c.o -MF CMakeFiles/ProceduralTerrainGenerator.dir/src/glad.c.o.d -o CMakeFiles/ProceduralTerrainGenerator.dir/src/glad.c.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/glad.c
 
 CMakeFiles/ProceduralTerrainGenerator.dir/src/glad.c.i: cmake_force
@@ -103,18 +145,24 @@ CMakeFiles/ProceduralTerrainGenerator.dir/src/glad.c.s: cmake_force
 # Object files for target ProceduralTerrainGenerator
 ProceduralTerrainGenerator_OBJECTS = \
 "CMakeFiles/ProceduralTerrainGenerator.dir/src/main.cpp.o" \
+"CMakeFiles/ProceduralTerrainGenerator.dir/src/Shader.cpp.o" \
+"CMakeFiles/ProceduralTerrainGenerator.dir/src/ShaderProgram.cpp.o" \
+"CMakeFiles/ProceduralTerrainGenerator.dir/src/Camera.cpp.o" \
 "CMakeFiles/ProceduralTerrainGenerator.dir/src/glad.c.o"
 
 # External object files for target ProceduralTerrainGenerator
 ProceduralTerrainGenerator_EXTERNAL_OBJECTS =
 
 ProceduralTerrainGenerator: CMakeFiles/ProceduralTerrainGenerator.dir/src/main.cpp.o
+ProceduralTerrainGenerator: CMakeFiles/ProceduralTerrainGenerator.dir/src/Shader.cpp.o
+ProceduralTerrainGenerator: CMakeFiles/ProceduralTerrainGenerator.dir/src/ShaderProgram.cpp.o
+ProceduralTerrainGenerator: CMakeFiles/ProceduralTerrainGenerator.dir/src/Camera.cpp.o
 ProceduralTerrainGenerator: CMakeFiles/ProceduralTerrainGenerator.dir/src/glad.c.o
 ProceduralTerrainGenerator: CMakeFiles/ProceduralTerrainGenerator.dir/build.make
 ProceduralTerrainGenerator: /opt/homebrew/lib/libglfw.3.4.dylib
 ProceduralTerrainGenerator: /opt/homebrew/lib/libglm.dylib
 ProceduralTerrainGenerator: CMakeFiles/ProceduralTerrainGenerator.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ProceduralTerrainGenerator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable ProceduralTerrainGenerator"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ProceduralTerrainGenerator.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

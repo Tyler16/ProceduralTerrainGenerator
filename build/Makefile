@@ -129,6 +129,78 @@ ProceduralTerrainGenerator/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/build
 .PHONY : ProceduralTerrainGenerator/fast
 
+src/Camera.o: src/Camera.cpp.o
+.PHONY : src/Camera.o
+
+# target to build an object file
+src/Camera.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/src/Camera.cpp.o
+.PHONY : src/Camera.cpp.o
+
+src/Camera.i: src/Camera.cpp.i
+.PHONY : src/Camera.i
+
+# target to preprocess a source file
+src/Camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/src/Camera.cpp.i
+.PHONY : src/Camera.cpp.i
+
+src/Camera.s: src/Camera.cpp.s
+.PHONY : src/Camera.s
+
+# target to generate assembly for a file
+src/Camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/src/Camera.cpp.s
+.PHONY : src/Camera.cpp.s
+
+src/Shader.o: src/Shader.cpp.o
+.PHONY : src/Shader.o
+
+# target to build an object file
+src/Shader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/src/Shader.cpp.o
+.PHONY : src/Shader.cpp.o
+
+src/Shader.i: src/Shader.cpp.i
+.PHONY : src/Shader.i
+
+# target to preprocess a source file
+src/Shader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/src/Shader.cpp.i
+.PHONY : src/Shader.cpp.i
+
+src/Shader.s: src/Shader.cpp.s
+.PHONY : src/Shader.s
+
+# target to generate assembly for a file
+src/Shader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/src/Shader.cpp.s
+.PHONY : src/Shader.cpp.s
+
+src/ShaderProgram.o: src/ShaderProgram.cpp.o
+.PHONY : src/ShaderProgram.o
+
+# target to build an object file
+src/ShaderProgram.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/src/ShaderProgram.cpp.o
+.PHONY : src/ShaderProgram.cpp.o
+
+src/ShaderProgram.i: src/ShaderProgram.cpp.i
+.PHONY : src/ShaderProgram.i
+
+# target to preprocess a source file
+src/ShaderProgram.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/src/ShaderProgram.cpp.i
+.PHONY : src/ShaderProgram.cpp.i
+
+src/ShaderProgram.s: src/ShaderProgram.cpp.s
+.PHONY : src/ShaderProgram.s
+
+# target to generate assembly for a file
+src/ShaderProgram.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/src/ShaderProgram.cpp.s
+.PHONY : src/ShaderProgram.cpp.s
+
 src/glad.o: src/glad.c.o
 .PHONY : src/glad.o
 
@@ -186,6 +258,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ProceduralTerrainGenerator"
+	@echo "... src/Camera.o"
+	@echo "... src/Camera.i"
+	@echo "... src/Camera.s"
+	@echo "... src/Shader.o"
+	@echo "... src/Shader.i"
+	@echo "... src/Shader.s"
+	@echo "... src/ShaderProgram.o"
+	@echo "... src/ShaderProgram.i"
+	@echo "... src/ShaderProgram.s"
 	@echo "... src/glad.o"
 	@echo "... src/glad.i"
 	@echo "... src/glad.s"

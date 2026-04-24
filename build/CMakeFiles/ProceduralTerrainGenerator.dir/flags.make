@@ -7,15 +7,15 @@ C_DEFINES =
 
 C_INCLUDES = -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -isystem /opt/homebrew/include
 
-C_FLAGSarm64 =  -arch arm64
+C_FLAGSarm64 = -g -arch arm64
 
-C_FLAGS =  -arch arm64
+C_FLAGS = -g -arch arm64
 
 CXX_DEFINES = 
 
 CXX_INCLUDES = -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -isystem /opt/homebrew/include
 
-CXX_FLAGSarm64 = -std=gnu++17 -arch arm64
+CXX_FLAGSarm64 = -g -std=gnu++17 -arch arm64
 
-CXX_FLAGS = -std=gnu++17 -arch arm64
+CXX_FLAGS = -g -std=gnu++17 -arch arm64
 

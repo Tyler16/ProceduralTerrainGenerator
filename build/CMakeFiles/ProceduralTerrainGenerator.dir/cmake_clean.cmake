@@ -1,4 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ProceduralTerrainGenerator.dir/src/Camera.cpp.o"
+  "CMakeFiles/ProceduralTerrainGenerator.dir/src/Camera.cpp.o.d"
+  "CMakeFiles/ProceduralTerrainGenerator.dir/src/Shader.cpp.o"
+  "CMakeFiles/ProceduralTerrainGenerator.dir/src/Shader.cpp.o.d"
+  "CMakeFiles/ProceduralTerrainGenerator.dir/src/ShaderProgram.cpp.o"
+  "CMakeFiles/ProceduralTerrainGenerator.dir/src/ShaderProgram.cpp.o.d"
   "CMakeFiles/ProceduralTerrainGenerator.dir/src/glad.c.o"
   "CMakeFiles/ProceduralTerrainGenerator.dir/src/glad.c.o.d"
   "CMakeFiles/ProceduralTerrainGenerator.dir/src/main.cpp.o"

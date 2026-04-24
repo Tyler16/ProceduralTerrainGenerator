@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/Users/tyler/Programming/ProceduralTerrainGenerator/build",
+  "command": "/usr/bin/c++  -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/main.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/main.cpp",
+  "file": "/Users/tyler/Programming/ProceduralTerrainGenerator/src/main.cpp",
+  "output": "CMakeFiles/ProceduralTerrainGenerator.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/tyler/Programming/ProceduralTerrainGenerator/build",
+  "command": "/usr/bin/c++  -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/Shader.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/Shader.cpp",
+  "file": "/Users/tyler/Programming/ProceduralTerrainGenerator/src/Shader.cpp",
+  "output": "CMakeFiles/ProceduralTerrainGenerator.dir/src/Shader.cpp.o"
+},
+{
+  "directory": "/Users/tyler/Programming/ProceduralTerrainGenerator/build",
+  "command": "/usr/bin/c++  -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/ShaderProgram.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/ShaderProgram.cpp",
+  "file": "/Users/tyler/Programming/ProceduralTerrainGenerator/src/ShaderProgram.cpp",
+  "output": "CMakeFiles/ProceduralTerrainGenerator.dir/src/ShaderProgram.cpp.o"
+},
+{
+  "directory": "/Users/tyler/Programming/ProceduralTerrainGenerator/build",
+  "command": "/usr/bin/c++  -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/Camera.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/Camera.cpp",
+  "file": "/Users/tyler/Programming/ProceduralTerrainGenerator/src/Camera.cpp",
+  "output": "CMakeFiles/ProceduralTerrainGenerator.dir/src/Camera.cpp.o"
+},
+{
+  "directory": "/Users/tyler/Programming/ProceduralTerrainGenerator/build",
+  "command": "/usr/bin/cc  -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -isystem /opt/homebrew/include -g -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/glad.c.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/glad.c",
+  "file": "/Users/tyler/Programming/ProceduralTerrainGenerator/src/glad.c",
+  "output": "CMakeFiles/ProceduralTerrainGenerator.dir/src/glad.c.o"
+}
+]
