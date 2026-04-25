@@ -9,19 +9,23 @@ ThreadPool::ThreadPool(size_t num_threads) {
             while (true) {
                 std::shared_ptr<Chunk> chunk;
                 {
-                    std::unique_lock<std::mutex> lock(queue_mutex_);
+                    std::unique_lock<std::mutex> lock(input_queue_mutex_);
                     cv_.wait(lock, [this] {
-                        return !chunk_queue_.empty() || stop_;
+                        return !input_queue_.empty() || stop_;
                     });
 
-                    if (stop_ && chunk_queue_.empty()) {
+                    if (stop_ && input_queue_.empty()) {
                         return;
                     }
 
-                    chunk = std::move(chunk_queue_.front());
-                    chunk_queue_.pop();
+                    chunk = std::move(input_queue_.front());
+                    input_queue_.pop();
                 }
                 chunk->generateVertices();
+                {
+                    std::unique_lock<std::mutex> lock(output_queue_mutex_);
+                    output_queue_.emplace(std::move(chunk));
+                }
             }
         });
     }
@@ -29,7 +33,7 @@ ThreadPool::ThreadPool(size_t num_threads) {
 
 ThreadPool::~ThreadPool() {
     {
-        std::unique_lock<std::mutex> lock(queue_mutex_);
+        std::unique_lock<std::mutex> input_lock(input_queue_mutex_);
         stop_ = true;
     }
 
@@ -42,8 +46,18 @@ ThreadPool::~ThreadPool() {
 
 void ThreadPool::enqueue(std::shared_ptr<Chunk> chunk) {
     {
-        std::unique_lock<std::mutex> lock(queue_mutex_);
-        chunk_queue_.emplace(std::move(chunk));
+        std::unique_lock<std::mutex> lock(input_queue_mutex_);
+        input_queue_.emplace(std::move(chunk));
     }
     cv_.notify_one();
+}
+
+std::shared_ptr<Chunk> ThreadPool::dequeue() {
+    std::unique_lock<std::mutex> lock(output_queue_mutex_);
+    if (output_queue_.empty()) {
+        return nullptr;
+    }
+    std::shared_ptr<Chunk> res = std::move(output_queue_.front());
+    output_queue_.pop();
+    return res;
 }
