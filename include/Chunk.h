@@ -11,19 +11,18 @@ class Chunk {
   public:
     Chunk(int chunk_x,
           int chunk_z,
-          BufferSet buffer_set,
           HeightGenerator& height_generator);
 
     void draw();
     void generateVertices();
-    void resetBuffer();
+    void setupBuffers(BufferSet buffer_set);
 
   private:
     BufferSet buffer_set_;
     int x_offset_;
     int z_offset_;
     int seed_;
-    std::atomic<bool> is_generated_;
+    bool ready_;
     std::vector<Vertex> vertices_;
     HeightGenerator& height_generator_;
 

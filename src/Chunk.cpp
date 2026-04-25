@@ -9,11 +9,9 @@
 
 Chunk::Chunk(int chunk_x,
              int chunk_z,
-             BufferSet buffer_set,
              HeightGenerator& height_generator) :
     x_offset_(chunk_x), z_offset_(chunk_z),
-    buffer_set_(buffer_set), height_generator_(height_generator) {
-    is_generated_ = false;
+    height_generator_(height_generator), ready_(false) {
 }
 
 float Chunk::getHeight(float global_x, float global_z) {
@@ -75,17 +73,24 @@ void Chunk::generateVertices() {
             vertices_.push_back(v);
         }
     }
+}
 
-    glBindVertexArray(buffer_set_.vao);
+void Chunk::setupBuffers(BufferSet buffer_set) {
+    
+    buffer_set_ = buffer_set;
     glBindBuffer(GL_ARRAY_BUFFER, buffer_set_.vbo);
-    glBufferData(GL_ARRAY_BUFFER, vertices_.size() * sizeof(Vertex),
-                 vertices_.data(), GL_DYNAMIC_DRAW);
-    glBindVertexArray(0);
-    is_generated_ = true;
+    glBufferSubData(GL_ARRAY_BUFFER,
+                    0,
+                    vertices_.size() * sizeof(Vertex),
+                    vertices_.data());
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    vertices_.clear();
+    vertices_.shrink_to_fit();
+    ready_ = true;
 }
 
 void Chunk::draw() {
-    if (!is_generated_) {
+    if (!ready_) {
         return;
     }
     glBindVertexArray(buffer_set_.vao);
