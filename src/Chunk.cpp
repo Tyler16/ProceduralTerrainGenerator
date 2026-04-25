@@ -1,5 +1,4 @@
 #include "Chunk.h"
-#include "FastNoiseLite.h"
 #include "GlobalConstants.h"
 #include "HeightGenerator.h"
 
@@ -10,15 +9,15 @@
 
 Chunk::Chunk(int chunk_x,
              int chunk_z,
-             BufferSet* buffer_set,
-             HeightGenerator& noise) :
+             BufferSet buffer_set,
+             HeightGenerator& height_generator) :
     x_offset_(chunk_x), z_offset_(chunk_z),
-    buffer_set_(buffer_set), noise_(noise) {
+    buffer_set_(buffer_set), height_generator_(height_generator) {
     is_generated_ = false;
 }
 
 float Chunk::getHeight(float global_x, float global_z) {
-    return noise_.getHeight(global_x, global_z);
+    return height_generator_.getHeight(global_x, global_z);
 }
 
 float Chunk::localToGlobal(int local, int offset) {
@@ -76,6 +75,12 @@ void Chunk::generateVertices() {
             vertices_.push_back(v);
         }
     }
+
+    glBindVertexArray(buffer_set_.vao);
+    glBindBuffer(GL_ARRAY_BUFFER, buffer_set_.vbo);
+    glBufferData(GL_ARRAY_BUFFER, vertices_.size() * sizeof(Vertex),
+                 vertices_.data(), GL_DYNAMIC_DRAW);
+    glBindVertexArray(0);
     is_generated_ = true;
 }
 
@@ -83,7 +88,7 @@ void Chunk::draw() {
     if (!is_generated_) {
         return;
     }
-    glBindVertexArray(buffer_set_->vao);
+    glBindVertexArray(buffer_set_.vao);
     glDrawElements(GL_TRIANGLES, Constants::Chunks::NUM_TRIANGLES * 3,
                    GL_UNSIGNED_INT, 0);
 }

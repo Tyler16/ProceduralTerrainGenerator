@@ -1,13 +1,12 @@
 #ifndef RENDERING_DATA_H
 #define RENDERING_DATA_H
 
+#include <glad/glad.h>
 #include <glm/glm.hpp>
 
 struct BufferSet {
-    unsigned int vao;
-    unsigned int vbo;
-    unsigned int ebo;
-    bool in_use;
+    GLuint vao;
+    GLuint vbo;
 };
 
 struct Vertex {
