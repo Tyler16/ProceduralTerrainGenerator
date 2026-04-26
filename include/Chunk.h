@@ -10,12 +10,10 @@
 
 class Chunk {
   public:
-    Chunk(int chunk_x,
-          int chunk_z,
-          HeightGenerator& height_generator);
+    Chunk(HeightGenerator& height_generator);
 
     void draw();
-    void generateVertices();
+    void setup(int chunk_x, int chunk_z);
     void setBufferData(BufferSet buffer_set);
     BufferSet getBufferSet();
     std::pair<int, int> getPos();
@@ -36,6 +34,7 @@ class Chunk {
     std::vector<float> generateHeightMap();
     glm::vec3 calculateNormal(int local_x, int local_z,
                               std::vector<float> height_map);
+    void generateVertices();
 };
 
 #endif

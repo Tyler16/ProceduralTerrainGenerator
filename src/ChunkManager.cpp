@@ -90,10 +90,8 @@ void ChunkManager::createChunks(int camera_x, int camera_z) {
            
             auto [it, inserted] = active_chunks_.try_emplace(key);
             if (inserted) {
-                it->second = std::make_shared<Chunk>(curr_x,
-                                                     curr_z,
-                                                     height_generator_);
-                thread_pool_.enqueue(it->second);
+                it->second = std::make_shared<Chunk>(height_generator_);
+                thread_pool_.enqueue(it->second, curr_x, curr_z);
             }
         }
     }

@@ -7,7 +7,7 @@ ThreadPool::ThreadPool(size_t num_threads) {
     for (size_t i = 0; i < num_threads; ++i) {
         threads_.emplace_back([this] {
             while (true) {
-                std::shared_ptr<Chunk> chunk;
+                InputQueueEntry curr_job;
                 {
                     std::unique_lock<std::mutex> lock(input_queue_mutex_);
                     cv_.wait(lock, [this] {
@@ -18,13 +18,13 @@ ThreadPool::ThreadPool(size_t num_threads) {
                         return;
                     }
 
-                    chunk = std::move(input_queue_.front());
+                    curr_job = std::move(input_queue_.front());
                     input_queue_.pop();
                 }
-                chunk->generateVertices();
+                curr_job.chunk_ptr->setup(curr_job.chunk_x, curr_job.chunk_z);
                 {
                     std::unique_lock<std::mutex> lock(output_queue_mutex_);
-                    output_queue_.emplace(std::move(chunk));
+                    output_queue_.emplace(std::move(curr_job.chunk_ptr));
                 }
             }
         });
@@ -44,10 +44,16 @@ ThreadPool::~ThreadPool() {
     }
 }
 
-void ThreadPool::enqueue(std::shared_ptr<Chunk> chunk) {
+void ThreadPool::enqueue(std::shared_ptr<Chunk> chunk_ptr,
+                         int chunk_x,
+                         int chunk_z) {
+    InputQueueEntry queue_entry;
+    queue_entry.chunk_ptr = std::move(chunk_ptr);
+    queue_entry.chunk_x = chunk_x;
+    queue_entry.chunk_z = chunk_z;
     {
         std::unique_lock<std::mutex> lock(input_queue_mutex_);
-        input_queue_.emplace(std::move(chunk));
+        input_queue_.emplace(queue_entry);
     }
     cv_.notify_one();
 }

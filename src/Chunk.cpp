@@ -8,12 +8,8 @@
 #include <utility>
 #include <vector>
 
-Chunk::Chunk(int chunk_x,
-             int chunk_z,
-             HeightGenerator& height_generator) :
-    x_offset_(chunk_x), z_offset_(chunk_z),
-    height_generator_(height_generator), ready_(false) {
-}
+Chunk::Chunk(HeightGenerator& height_generator) :
+    height_generator_(height_generator), ready_(false) {}
 
 bool Chunk::isReady() {
     return ready_;
@@ -106,4 +102,10 @@ void Chunk::draw() {
     glBindVertexArray(buffer_set_.vao);
     glDrawElements(GL_TRIANGLES, Constants::Chunks::NUM_TRIANGLES * 3,
                    GL_UNSIGNED_INT, 0);
+}
+
+void Chunk::setup(int chunk_x, int chunk_z) {
+    x_offset_ = chunk_x;
+    z_offset_ = chunk_z;
+    generateVertices();
 }

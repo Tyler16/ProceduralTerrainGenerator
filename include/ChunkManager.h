@@ -21,7 +21,7 @@ class ChunkManager {
     static constexpr int RENDER_DIST = 5;
     static constexpr int CLEANUP_DIST = 6;
     static constexpr size_t NUM_BUFFERS = 100;
-    static constexpr size_t NUM_THREADS = 8;
+    size_t NUM_THREADS = std::thread::hardware_concurrency() - 1;
     static constexpr float MAX_HEIGHT = 100.0f;
     static constexpr double CLEANUP_INTERVAL = 1.0f;
     static constexpr int SET_DATA_LIMIT = 2;
