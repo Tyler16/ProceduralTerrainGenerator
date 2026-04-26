@@ -85,12 +85,12 @@ clean: CMakeFiles/ProceduralTerrainGenerator.dir/clean
 CMakeFiles/ProceduralTerrainGenerator.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target ProceduralTerrainGenerator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target ProceduralTerrainGenerator"
 .PHONY : CMakeFiles/ProceduralTerrainGenerator.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ProceduralTerrainGenerator.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ProceduralTerrainGenerator.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles 0
 .PHONY : CMakeFiles/ProceduralTerrainGenerator.dir/rule
@@ -102,7 +102,7 @@ ProceduralTerrainGenerator: CMakeFiles/ProceduralTerrainGenerator.dir/rule
 # codegen rule for target.
 CMakeFiles/ProceduralTerrainGenerator.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Finished codegen for target ProceduralTerrainGenerator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Finished codegen for target ProceduralTerrainGenerator"
 .PHONY : CMakeFiles/ProceduralTerrainGenerator.dir/codegen
 
 # clean rule for target.

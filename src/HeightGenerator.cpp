@@ -13,8 +13,9 @@ HeightGenerator::HeightGenerator(int seed, float max_height) :
 }
 
 float HeightGenerator::getHeight(float world_x, float world_z) {
-    float noiseValue = noiseGenerator_.GetNoise(world_x * FREQUENCY,
+    float noise_value = noiseGenerator_.GetNoise(world_x * FREQUENCY,
                                                 world_z * FREQUENCY);
-    float normalizedHeight = (noiseValue + 1.0f) / 2.0f;
-    return pow(normalizedHeight, 1.5f) * max_height_;
+    float normalized_height = (noise_value + 1.0f) / 2.0f;
+    return normalized_height * max_height_;
+    //return noiseValue * max_height_;
 }

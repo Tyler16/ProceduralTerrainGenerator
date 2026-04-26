@@ -129,6 +129,30 @@ ProceduralTerrainGenerator/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/build
 .PHONY : ProceduralTerrainGenerator/fast
 
+src/BufferPool.o: src/BufferPool.cpp.o
+.PHONY : src/BufferPool.o
+
+# target to build an object file
+src/BufferPool.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/src/BufferPool.cpp.o
+.PHONY : src/BufferPool.cpp.o
+
+src/BufferPool.i: src/BufferPool.cpp.i
+.PHONY : src/BufferPool.i
+
+# target to preprocess a source file
+src/BufferPool.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/src/BufferPool.cpp.i
+.PHONY : src/BufferPool.cpp.i
+
+src/BufferPool.s: src/BufferPool.cpp.s
+.PHONY : src/BufferPool.s
+
+# target to generate assembly for a file
+src/BufferPool.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/src/BufferPool.cpp.s
+.PHONY : src/BufferPool.cpp.s
+
 src/Camera.o: src/Camera.cpp.o
 .PHONY : src/Camera.o
 
@@ -152,6 +176,78 @@ src/Camera.s: src/Camera.cpp.s
 src/Camera.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/src/Camera.cpp.s
 .PHONY : src/Camera.cpp.s
+
+src/Chunk.o: src/Chunk.cpp.o
+.PHONY : src/Chunk.o
+
+# target to build an object file
+src/Chunk.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/src/Chunk.cpp.o
+.PHONY : src/Chunk.cpp.o
+
+src/Chunk.i: src/Chunk.cpp.i
+.PHONY : src/Chunk.i
+
+# target to preprocess a source file
+src/Chunk.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/src/Chunk.cpp.i
+.PHONY : src/Chunk.cpp.i
+
+src/Chunk.s: src/Chunk.cpp.s
+.PHONY : src/Chunk.s
+
+# target to generate assembly for a file
+src/Chunk.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/src/Chunk.cpp.s
+.PHONY : src/Chunk.cpp.s
+
+src/ChunkManager.o: src/ChunkManager.cpp.o
+.PHONY : src/ChunkManager.o
+
+# target to build an object file
+src/ChunkManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/src/ChunkManager.cpp.o
+.PHONY : src/ChunkManager.cpp.o
+
+src/ChunkManager.i: src/ChunkManager.cpp.i
+.PHONY : src/ChunkManager.i
+
+# target to preprocess a source file
+src/ChunkManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/src/ChunkManager.cpp.i
+.PHONY : src/ChunkManager.cpp.i
+
+src/ChunkManager.s: src/ChunkManager.cpp.s
+.PHONY : src/ChunkManager.s
+
+# target to generate assembly for a file
+src/ChunkManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/src/ChunkManager.cpp.s
+.PHONY : src/ChunkManager.cpp.s
+
+src/HeightGenerator.o: src/HeightGenerator.cpp.o
+.PHONY : src/HeightGenerator.o
+
+# target to build an object file
+src/HeightGenerator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/src/HeightGenerator.cpp.o
+.PHONY : src/HeightGenerator.cpp.o
+
+src/HeightGenerator.i: src/HeightGenerator.cpp.i
+.PHONY : src/HeightGenerator.i
+
+# target to preprocess a source file
+src/HeightGenerator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/src/HeightGenerator.cpp.i
+.PHONY : src/HeightGenerator.cpp.i
+
+src/HeightGenerator.s: src/HeightGenerator.cpp.s
+.PHONY : src/HeightGenerator.s
+
+# target to generate assembly for a file
+src/HeightGenerator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/src/HeightGenerator.cpp.s
+.PHONY : src/HeightGenerator.cpp.s
 
 src/Shader.o: src/Shader.cpp.o
 .PHONY : src/Shader.o
@@ -200,6 +296,30 @@ src/ShaderProgram.s: src/ShaderProgram.cpp.s
 src/ShaderProgram.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/src/ShaderProgram.cpp.s
 .PHONY : src/ShaderProgram.cpp.s
+
+src/ThreadPool.o: src/ThreadPool.cpp.o
+.PHONY : src/ThreadPool.o
+
+# target to build an object file
+src/ThreadPool.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/src/ThreadPool.cpp.o
+.PHONY : src/ThreadPool.cpp.o
+
+src/ThreadPool.i: src/ThreadPool.cpp.i
+.PHONY : src/ThreadPool.i
+
+# target to preprocess a source file
+src/ThreadPool.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/src/ThreadPool.cpp.i
+.PHONY : src/ThreadPool.cpp.i
+
+src/ThreadPool.s: src/ThreadPool.cpp.s
+.PHONY : src/ThreadPool.s
+
+# target to generate assembly for a file
+src/ThreadPool.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/src/ThreadPool.cpp.s
+.PHONY : src/ThreadPool.cpp.s
 
 src/glad.o: src/glad.c.o
 .PHONY : src/glad.o
@@ -258,15 +378,30 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ProceduralTerrainGenerator"
+	@echo "... src/BufferPool.o"
+	@echo "... src/BufferPool.i"
+	@echo "... src/BufferPool.s"
 	@echo "... src/Camera.o"
 	@echo "... src/Camera.i"
 	@echo "... src/Camera.s"
+	@echo "... src/Chunk.o"
+	@echo "... src/Chunk.i"
+	@echo "... src/Chunk.s"
+	@echo "... src/ChunkManager.o"
+	@echo "... src/ChunkManager.i"
+	@echo "... src/ChunkManager.s"
+	@echo "... src/HeightGenerator.o"
+	@echo "... src/HeightGenerator.i"
+	@echo "... src/HeightGenerator.s"
 	@echo "... src/Shader.o"
 	@echo "... src/Shader.i"
 	@echo "... src/Shader.s"
 	@echo "... src/ShaderProgram.o"
 	@echo "... src/ShaderProgram.i"
 	@echo "... src/ShaderProgram.s"
+	@echo "... src/ThreadPool.o"
+	@echo "... src/ThreadPool.i"
+	@echo "... src/ThreadPool.s"
 	@echo "... src/glad.o"
 	@echo "... src/glad.i"
 	@echo "... src/glad.s"

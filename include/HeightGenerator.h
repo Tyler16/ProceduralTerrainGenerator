@@ -13,7 +13,7 @@ class HeightGenerator {
     int seed_;
     float max_height_;
 
-    static constexpr float FREQUENCY = 0.015f;
+    static constexpr float FREQUENCY = 0.05f;
 };
 
 #endif

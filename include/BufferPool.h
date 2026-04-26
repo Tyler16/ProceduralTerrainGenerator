@@ -16,7 +16,7 @@ class BufferPool {
   private:
     std::vector<BufferSet> buffer_stack_;
     GLuint shared_ebo_;
-    static std::vector<Triangle> shared_triangles_;
+    std::vector<Triangle> shared_triangles_;
 
     void createSharedTriangles();
 

@@ -25,6 +25,36 @@
 },
 {
   "directory": "/Users/tyler/Programming/ProceduralTerrainGenerator/build",
+  "command": "/usr/bin/c++  -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/Chunk.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/Chunk.cpp",
+  "file": "/Users/tyler/Programming/ProceduralTerrainGenerator/src/Chunk.cpp",
+  "output": "CMakeFiles/ProceduralTerrainGenerator.dir/src/Chunk.cpp.o"
+},
+{
+  "directory": "/Users/tyler/Programming/ProceduralTerrainGenerator/build",
+  "command": "/usr/bin/c++  -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/ChunkManager.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/ChunkManager.cpp",
+  "file": "/Users/tyler/Programming/ProceduralTerrainGenerator/src/ChunkManager.cpp",
+  "output": "CMakeFiles/ProceduralTerrainGenerator.dir/src/ChunkManager.cpp.o"
+},
+{
+  "directory": "/Users/tyler/Programming/ProceduralTerrainGenerator/build",
+  "command": "/usr/bin/c++  -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/HeightGenerator.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/HeightGenerator.cpp",
+  "file": "/Users/tyler/Programming/ProceduralTerrainGenerator/src/HeightGenerator.cpp",
+  "output": "CMakeFiles/ProceduralTerrainGenerator.dir/src/HeightGenerator.cpp.o"
+},
+{
+  "directory": "/Users/tyler/Programming/ProceduralTerrainGenerator/build",
+  "command": "/usr/bin/c++  -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/ThreadPool.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/ThreadPool.cpp",
+  "file": "/Users/tyler/Programming/ProceduralTerrainGenerator/src/ThreadPool.cpp",
+  "output": "CMakeFiles/ProceduralTerrainGenerator.dir/src/ThreadPool.cpp.o"
+},
+{
+  "directory": "/Users/tyler/Programming/ProceduralTerrainGenerator/build",
+  "command": "/usr/bin/c++  -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/BufferPool.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/BufferPool.cpp",
+  "file": "/Users/tyler/Programming/ProceduralTerrainGenerator/src/BufferPool.cpp",
+  "output": "CMakeFiles/ProceduralTerrainGenerator.dir/src/BufferPool.cpp.o"
+},
+{
+  "directory": "/Users/tyler/Programming/ProceduralTerrainGenerator/build",
   "command": "/usr/bin/cc  -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -isystem /opt/homebrew/include -g -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/glad.c.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/glad.c",
   "file": "/Users/tyler/Programming/ProceduralTerrainGenerator/src/glad.c",
   "output": "CMakeFiles/ProceduralTerrainGenerator.dir/src/glad.c.o"

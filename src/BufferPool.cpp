@@ -58,10 +58,10 @@ void BufferPool::createSharedTriangles() {
             unsigned int vert3 = vert1 + 1;
             unsigned int vert4 = vert2 + 1;
 
-            Triangle t1 = { vert3, vert2, vert1 };
+            Triangle t1 = { vert1, vert2, vert3 };
             shared_triangles_.push_back(t1);
 
-            Triangle t2 = { vert2, vert3, vert4 };
+            Triangle t2 = { vert4, vert3, vert2 };
             shared_triangles_.push_back(t2);
         }
     }

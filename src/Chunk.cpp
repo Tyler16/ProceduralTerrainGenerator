@@ -75,6 +75,7 @@ void Chunk::generateVertices() {
             Vertex v;
 
             float height = height_map[localToIdx(local_x, local_z)];
+
             v.position = glm::vec3(localToGlobal(local_x - 1, x_offset_),
                                    height,
                                    localToGlobal(local_z - 1, z_offset_));
