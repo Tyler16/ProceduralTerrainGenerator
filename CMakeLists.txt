@@ -1,6 +1,13 @@
 cmake_minimum_required(VERSION 3.10)
 project(ProceduralTerrainGenerator)
 
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Release CACHE STRING "Choose the type of build." FORCE)
+endif()
+
+# This ensures sub-libraries (like FastNoise2) follow the same rule
+set(CMAKE_CONFIGURATION_TYPES "Release" CACHE STRING "" FORCE)
+
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -12,6 +19,21 @@ find_package(glm REQUIRED)
 include_directories(include)
 
 add_subdirectory(external/FastNoise2)
+
+# This tells CMake: "Whenever you think you need the Debug version of FastNoise, 
+# you actually just want the Release version."
+set_target_properties(FastNoise PROPERTIES 
+    MAP_IMPORTED_CONFIG_DEBUG Release
+    MAP_IMPORTED_CONFIG_RELWITHDEBINFO Release
+    MAP_IMPORTED_CONFIG_MINSIZEREL Release
+)
+
+# FORCE the output name so it doesn't try to add a 'D'
+set_target_properties(FastNoise PROPERTIES DEBUG_POSTFIX "")
+
+if(CMAKE_BUILD_TYPE STREQUAL "Release")
+    set_target_properties(FastNoise PROPERTIES MAP_IMPORTED_CONFIG_DEBUG Release)
+endif()
 
 add_executable(ProceduralTerrainGenerator
     src/main.cpp
