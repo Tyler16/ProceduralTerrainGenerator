@@ -5,6 +5,7 @@
 #include <glad/glad.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
+#include <utility>
 #include <vector>
 
 Chunk::Chunk(int chunk_x,
@@ -12,6 +13,18 @@ Chunk::Chunk(int chunk_x,
              HeightGenerator& height_generator) :
     x_offset_(chunk_x), z_offset_(chunk_z),
     height_generator_(height_generator), ready_(false) {
+}
+
+bool Chunk::isReady() {
+    return ready_;
+}
+
+BufferSet Chunk::getBufferSet() {
+    return buffer_set_;
+}
+
+std::pair<int, int> Chunk::getPos() {
+    return {x_offset_, z_offset_};
 }
 
 float Chunk::getHeight(float global_x, float global_z) {
@@ -24,7 +37,7 @@ float Chunk::localToGlobal(int local, int offset) {
 }
 
 int Chunk::localToIdx(int local_x, int local_z) {
-    return local_z * Constants::Chunks::PADDED_RESOLUTION + local_x;
+    return local_z * (Constants::Chunks::PADDED_RESOLUTION + 1) + local_x;
 }
 
 std::vector<float> Chunk::generateHeightMap() {
@@ -34,7 +47,7 @@ std::vector<float> Chunk::generateHeightMap() {
         for (int local_x = 0; local_x <= Constants::Chunks::PADDED_RESOLUTION; ++local_x) {
             float global_x = localToGlobal(local_x - 1, x_offset_);
             float global_z = localToGlobal(local_z - 1, z_offset_);
-            float global_y = getHeight(global_x, global_y);
+            float global_y = getHeight(global_x, global_z);
             height_map.push_back(global_y);
         }
     }
@@ -75,7 +88,7 @@ void Chunk::generateVertices() {
     }
 }
 
-void Chunk::setupBuffers(BufferSet buffer_set) {
+void Chunk::setBufferData(BufferSet buffer_set) {
     
     buffer_set_ = buffer_set;
     glBindBuffer(GL_ARRAY_BUFFER, buffer_set_.vbo);

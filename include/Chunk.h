@@ -5,6 +5,7 @@
 #include "RenderingStructs.h"
 
 #include <glm/glm.hpp>
+#include <utility>
 #include <vector>
 
 class Chunk {
@@ -15,7 +16,10 @@ class Chunk {
 
     void draw();
     void generateVertices();
-    void setupBuffers(BufferSet buffer_set);
+    void setBufferData(BufferSet buffer_set);
+    BufferSet getBufferSet();
+    std::pair<int, int> getPos();
+    bool isReady();
 
   private:
     BufferSet buffer_set_;

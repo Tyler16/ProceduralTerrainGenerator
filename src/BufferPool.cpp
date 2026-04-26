@@ -9,16 +9,16 @@ BufferPool::BufferPool(size_t num_buffers) {
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, shared_ebo_);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER,
                  shared_triangles_.size() * sizeof(Triangle),
-                 shared_triangles_.data(), GL_DYNAMIC_DRAW);
+                 shared_triangles_.data(), GL_STATIC_DRAW);
 
-    buffer_stack_.reserve(num_buffers);
     for (int i = 0; i < num_buffers; ++i) {
-        glGenVertexArrays(1, &(buffer_stack_[i].vao));
-        glGenBuffers(1, &(buffer_stack_[i].vbo));
+        BufferSet curr_buffer_set;
+        glGenVertexArrays(1, &(curr_buffer_set.vao));
+        glGenBuffers(1, &(curr_buffer_set.vbo));
 
-        glBindVertexArray(buffer_stack_[i].vao);
+        glBindVertexArray(curr_buffer_set.vao);
 
-        glBindBuffer(GL_ARRAY_BUFFER, buffer_stack_[i].vbo);
+        glBindBuffer(GL_ARRAY_BUFFER, curr_buffer_set.vbo);
         glBufferData(GL_ARRAY_BUFFER,
                      Constants::Chunks::NUM_VERTS * sizeof(Vertex),
                      nullptr, GL_DYNAMIC_DRAW);
@@ -40,6 +40,7 @@ BufferPool::BufferPool(size_t num_buffers) {
         glBindVertexArray(0);
         glBindBuffer(GL_ARRAY_BUFFER, 0);
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+        buffer_stack_.push_back(curr_buffer_set);
     }
 }
 
@@ -74,6 +75,10 @@ BufferSet BufferPool::acquire() {
     BufferSet free_buffer = buffer_stack_[buffer_stack_.size() - 1];
     buffer_stack_.pop_back();
     return free_buffer;
+}
+
+bool BufferPool::hasBuffer() {
+    return buffer_stack_.size() > 0;
 }
 
 void BufferPool::release(BufferSet buffer_set) {
