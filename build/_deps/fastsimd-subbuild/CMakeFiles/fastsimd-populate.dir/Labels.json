@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-subbuild/CMakeFiles/fastsimd-populate"
+		},
+		{
+			"file" : "/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-subbuild/CMakeFiles/fastsimd-populate.rule"
+		},
+		{
+			"file" : "/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-subbuild/CMakeFiles/fastsimd-populate-complete.rule"
+		},
+		{
+			"file" : "/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-subbuild/fastsimd-populate-prefix/src/fastsimd-populate-stamp/fastsimd-populate-build.rule"
+		},
+		{
+			"file" : "/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-subbuild/fastsimd-populate-prefix/src/fastsimd-populate-stamp/fastsimd-populate-configure.rule"
+		},
+		{
+			"file" : "/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-subbuild/fastsimd-populate-prefix/src/fastsimd-populate-stamp/fastsimd-populate-download.rule"
+		},
+		{
+			"file" : "/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-subbuild/fastsimd-populate-prefix/src/fastsimd-populate-stamp/fastsimd-populate-install.rule"
+		},
+		{
+			"file" : "/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-subbuild/fastsimd-populate-prefix/src/fastsimd-populate-stamp/fastsimd-populate-mkdir.rule"
+		},
+		{
+			"file" : "/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-subbuild/fastsimd-populate-prefix/src/fastsimd-populate-stamp/fastsimd-populate-patch.rule"
+		},
+		{
+			"file" : "/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-subbuild/fastsimd-populate-prefix/src/fastsimd-populate-stamp/fastsimd-populate-test.rule"
+		},
+		{
+			"file" : "/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-subbuild/fastsimd-populate-prefix/src/fastsimd-populate-stamp/fastsimd-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"fastsimd-populate"
+		],
+		"name" : "fastsimd-populate"
+	}
+}

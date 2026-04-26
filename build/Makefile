@@ -85,6 +85,51 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/opt/homebrew/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/opt/homebrew/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles /Users/tyler/Programming/ProceduralTerrainGenerator/build//CMakeFiles/progress.marks
@@ -128,6 +173,45 @@ ProceduralTerrainGenerator: cmake_check_build_system
 ProceduralTerrainGenerator/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProceduralTerrainGenerator.dir/build.make CMakeFiles/ProceduralTerrainGenerator.dir/build
 .PHONY : ProceduralTerrainGenerator/fast
+
+#=============================================================================
+# Target rules for targets named FastNoise
+
+# Build rule for target.
+FastNoise: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 FastNoise
+.PHONY : FastNoise
+
+# fast build rule for target.
+FastNoise/fast:
+	$(MAKE) $(MAKESILENT) -f external/FastNoise2/src/CMakeFiles/FastNoise.dir/build.make external/FastNoise2/src/CMakeFiles/FastNoise.dir/build
+.PHONY : FastNoise/fast
+
+#=============================================================================
+# Target rules for targets named FastSIMD_FastNoise
+
+# Build rule for target.
+FastSIMD_FastNoise: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 FastSIMD_FastNoise
+.PHONY : FastSIMD_FastNoise
+
+# fast build rule for target.
+FastSIMD_FastNoise/fast:
+	$(MAKE) $(MAKESILENT) -f external/FastNoise2/src/CMakeFiles/FastSIMD_FastNoise.dir/build.make external/FastNoise2/src/CMakeFiles/FastSIMD_FastNoise.dir/build
+.PHONY : FastSIMD_FastNoise/fast
+
+#=============================================================================
+# Target rules for targets named FastSIMD
+
+# Build rule for target.
+FastSIMD: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 FastSIMD
+.PHONY : FastSIMD
+
+# fast build rule for target.
+FastSIMD/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/fastsimd-build/CMakeFiles/FastSIMD.dir/build.make _deps/fastsimd-build/CMakeFiles/FastSIMD.dir/build
+.PHONY : FastSIMD/fast
 
 src/BufferPool.o: src/BufferPool.cpp.o
 .PHONY : src/BufferPool.o
@@ -376,7 +460,14 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... FastNoise"
+	@echo "... FastSIMD"
+	@echo "... FastSIMD_FastNoise"
 	@echo "... ProceduralTerrainGenerator"
 	@echo "... src/BufferPool.o"
 	@echo "... src/BufferPool.i"

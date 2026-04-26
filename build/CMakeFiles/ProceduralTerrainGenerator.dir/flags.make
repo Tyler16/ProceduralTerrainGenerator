@@ -3,17 +3,17 @@
 
 # compile C with /usr/bin/cc
 # compile CXX with /usr/bin/c++
-C_DEFINES = 
+C_DEFINES = -DFASTNOISE2_VERSION=\"1.1.1\" -DFASTNOISE_STATIC_LIB -DFASTSIMD_IS_RELAXED=1 -DFASTSIMD_STATIC_LIB
 
-C_INCLUDES = -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -isystem /opt/homebrew/include
+C_INCLUDES = -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/external/FastNoise2/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/external/FastNoise2/src/fastsimd/FastSIMD_FastNoise/include -isystem /opt/homebrew/include
 
 C_FLAGSarm64 = -g -arch arm64
 
 C_FLAGS = -g -arch arm64
 
-CXX_DEFINES = 
+CXX_DEFINES = -DFASTNOISE2_VERSION=\"1.1.1\" -DFASTNOISE_STATIC_LIB -DFASTSIMD_IS_RELAXED=1 -DFASTSIMD_STATIC_LIB
 
-CXX_INCLUDES = -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -isystem /opt/homebrew/include
+CXX_INCLUDES = -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/external/FastNoise2/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/external/FastNoise2/src/fastsimd/FastSIMD_FastNoise/include -isystem /opt/homebrew/include
 
 CXX_FLAGSarm64 = -g -std=gnu++17 -arch arm64
 

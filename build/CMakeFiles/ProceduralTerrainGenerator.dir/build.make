@@ -241,6 +241,7 @@ ProceduralTerrainGenerator: CMakeFiles/ProceduralTerrainGenerator.dir/src/glad.c
 ProceduralTerrainGenerator: CMakeFiles/ProceduralTerrainGenerator.dir/build.make
 ProceduralTerrainGenerator: /opt/homebrew/lib/libglfw.3.4.dylib
 ProceduralTerrainGenerator: /opt/homebrew/lib/libglm.dylib
+ProceduralTerrainGenerator: external/FastNoise2/src/libFastNoiseD.a
 ProceduralTerrainGenerator: CMakeFiles/ProceduralTerrainGenerator.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable ProceduralTerrainGenerator"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ProceduralTerrainGenerator.dir/link.txt --verbose=$(VERBOSE)

@@ -1,62 +1,98 @@
 [
 {
   "directory": "/Users/tyler/Programming/ProceduralTerrainGenerator/build",
-  "command": "/usr/bin/c++  -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/main.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/main.cpp",
+  "command": "/usr/bin/c++ -DFASTNOISE2_VERSION=\\\"1.1.1\\\" -DFASTNOISE_STATIC_LIB -DFASTSIMD_IS_RELAXED=1 -DFASTSIMD_STATIC_LIB -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/external/FastNoise2/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/external/FastNoise2/src/fastsimd/FastSIMD_FastNoise/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/main.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/main.cpp",
   "file": "/Users/tyler/Programming/ProceduralTerrainGenerator/src/main.cpp",
   "output": "CMakeFiles/ProceduralTerrainGenerator.dir/src/main.cpp.o"
 },
 {
   "directory": "/Users/tyler/Programming/ProceduralTerrainGenerator/build",
-  "command": "/usr/bin/c++  -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/Shader.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/Shader.cpp",
+  "command": "/usr/bin/c++ -DFASTNOISE2_VERSION=\\\"1.1.1\\\" -DFASTNOISE_STATIC_LIB -DFASTSIMD_IS_RELAXED=1 -DFASTSIMD_STATIC_LIB -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/external/FastNoise2/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/external/FastNoise2/src/fastsimd/FastSIMD_FastNoise/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/Shader.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/Shader.cpp",
   "file": "/Users/tyler/Programming/ProceduralTerrainGenerator/src/Shader.cpp",
   "output": "CMakeFiles/ProceduralTerrainGenerator.dir/src/Shader.cpp.o"
 },
 {
   "directory": "/Users/tyler/Programming/ProceduralTerrainGenerator/build",
-  "command": "/usr/bin/c++  -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/ShaderProgram.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/ShaderProgram.cpp",
+  "command": "/usr/bin/c++ -DFASTNOISE2_VERSION=\\\"1.1.1\\\" -DFASTNOISE_STATIC_LIB -DFASTSIMD_IS_RELAXED=1 -DFASTSIMD_STATIC_LIB -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/external/FastNoise2/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/external/FastNoise2/src/fastsimd/FastSIMD_FastNoise/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/ShaderProgram.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/ShaderProgram.cpp",
   "file": "/Users/tyler/Programming/ProceduralTerrainGenerator/src/ShaderProgram.cpp",
   "output": "CMakeFiles/ProceduralTerrainGenerator.dir/src/ShaderProgram.cpp.o"
 },
 {
   "directory": "/Users/tyler/Programming/ProceduralTerrainGenerator/build",
-  "command": "/usr/bin/c++  -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/Camera.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/Camera.cpp",
+  "command": "/usr/bin/c++ -DFASTNOISE2_VERSION=\\\"1.1.1\\\" -DFASTNOISE_STATIC_LIB -DFASTSIMD_IS_RELAXED=1 -DFASTSIMD_STATIC_LIB -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/external/FastNoise2/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/external/FastNoise2/src/fastsimd/FastSIMD_FastNoise/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/Camera.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/Camera.cpp",
   "file": "/Users/tyler/Programming/ProceduralTerrainGenerator/src/Camera.cpp",
   "output": "CMakeFiles/ProceduralTerrainGenerator.dir/src/Camera.cpp.o"
 },
 {
   "directory": "/Users/tyler/Programming/ProceduralTerrainGenerator/build",
-  "command": "/usr/bin/c++  -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/Chunk.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/Chunk.cpp",
+  "command": "/usr/bin/c++ -DFASTNOISE2_VERSION=\\\"1.1.1\\\" -DFASTNOISE_STATIC_LIB -DFASTSIMD_IS_RELAXED=1 -DFASTSIMD_STATIC_LIB -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/external/FastNoise2/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/external/FastNoise2/src/fastsimd/FastSIMD_FastNoise/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/Chunk.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/Chunk.cpp",
   "file": "/Users/tyler/Programming/ProceduralTerrainGenerator/src/Chunk.cpp",
   "output": "CMakeFiles/ProceduralTerrainGenerator.dir/src/Chunk.cpp.o"
 },
 {
   "directory": "/Users/tyler/Programming/ProceduralTerrainGenerator/build",
-  "command": "/usr/bin/c++  -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/ChunkManager.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/ChunkManager.cpp",
+  "command": "/usr/bin/c++ -DFASTNOISE2_VERSION=\\\"1.1.1\\\" -DFASTNOISE_STATIC_LIB -DFASTSIMD_IS_RELAXED=1 -DFASTSIMD_STATIC_LIB -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/external/FastNoise2/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/external/FastNoise2/src/fastsimd/FastSIMD_FastNoise/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/ChunkManager.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/ChunkManager.cpp",
   "file": "/Users/tyler/Programming/ProceduralTerrainGenerator/src/ChunkManager.cpp",
   "output": "CMakeFiles/ProceduralTerrainGenerator.dir/src/ChunkManager.cpp.o"
 },
 {
   "directory": "/Users/tyler/Programming/ProceduralTerrainGenerator/build",
-  "command": "/usr/bin/c++  -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/HeightGenerator.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/HeightGenerator.cpp",
+  "command": "/usr/bin/c++ -DFASTNOISE2_VERSION=\\\"1.1.1\\\" -DFASTNOISE_STATIC_LIB -DFASTSIMD_IS_RELAXED=1 -DFASTSIMD_STATIC_LIB -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/external/FastNoise2/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/external/FastNoise2/src/fastsimd/FastSIMD_FastNoise/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/HeightGenerator.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/HeightGenerator.cpp",
   "file": "/Users/tyler/Programming/ProceduralTerrainGenerator/src/HeightGenerator.cpp",
   "output": "CMakeFiles/ProceduralTerrainGenerator.dir/src/HeightGenerator.cpp.o"
 },
 {
   "directory": "/Users/tyler/Programming/ProceduralTerrainGenerator/build",
-  "command": "/usr/bin/c++  -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/ThreadPool.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/ThreadPool.cpp",
+  "command": "/usr/bin/c++ -DFASTNOISE2_VERSION=\\\"1.1.1\\\" -DFASTNOISE_STATIC_LIB -DFASTSIMD_IS_RELAXED=1 -DFASTSIMD_STATIC_LIB -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/external/FastNoise2/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/external/FastNoise2/src/fastsimd/FastSIMD_FastNoise/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/ThreadPool.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/ThreadPool.cpp",
   "file": "/Users/tyler/Programming/ProceduralTerrainGenerator/src/ThreadPool.cpp",
   "output": "CMakeFiles/ProceduralTerrainGenerator.dir/src/ThreadPool.cpp.o"
 },
 {
   "directory": "/Users/tyler/Programming/ProceduralTerrainGenerator/build",
-  "command": "/usr/bin/c++  -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/BufferPool.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/BufferPool.cpp",
+  "command": "/usr/bin/c++ -DFASTNOISE2_VERSION=\\\"1.1.1\\\" -DFASTNOISE_STATIC_LIB -DFASTSIMD_IS_RELAXED=1 -DFASTSIMD_STATIC_LIB -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/external/FastNoise2/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/external/FastNoise2/src/fastsimd/FastSIMD_FastNoise/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/BufferPool.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/BufferPool.cpp",
   "file": "/Users/tyler/Programming/ProceduralTerrainGenerator/src/BufferPool.cpp",
   "output": "CMakeFiles/ProceduralTerrainGenerator.dir/src/BufferPool.cpp.o"
 },
 {
   "directory": "/Users/tyler/Programming/ProceduralTerrainGenerator/build",
-  "command": "/usr/bin/cc  -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -isystem /opt/homebrew/include -g -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/glad.c.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/glad.c",
+  "command": "/usr/bin/cc -DFASTNOISE2_VERSION=\\\"1.1.1\\\" -DFASTNOISE_STATIC_LIB -DFASTSIMD_IS_RELAXED=1 -DFASTSIMD_STATIC_LIB -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/external/FastNoise2/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/external/FastNoise2/src/fastsimd/FastSIMD_FastNoise/include -isystem /opt/homebrew/include -g -arch arm64 -o CMakeFiles/ProceduralTerrainGenerator.dir/src/glad.c.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/src/glad.c",
   "file": "/Users/tyler/Programming/ProceduralTerrainGenerator/src/glad.c",
   "output": "CMakeFiles/ProceduralTerrainGenerator.dir/src/glad.c.o"
+},
+{
+  "directory": "/Users/tyler/Programming/ProceduralTerrainGenerator/build/external/FastNoise2/src",
+  "command": "/usr/bin/c++ -DFASTSIMD_EXPORT -DFASTSIMD_IS_RELAXED=1 -DFASTSIMD_LIBRARY_NAME=FastSIMD_FastNoise -DFASTSIMD_STATIC_LIB -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/external/FastNoise2/src/fastsimd/FastSIMD_FastNoise/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/external/FastNoise2/src/../include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/include -g -std=gnu++17 -arch arm64 -fno-stack-protector -Wno-nan-infinity-disabled -mllvm -x86-use-vzeroupper=0 -ffast-math -o CMakeFiles/FastSIMD_FastNoise.dir/fastsimd/FastSIMD_FastNoise/FastSIMD_FastNoise_NEON.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/external/FastNoise2/src/fastsimd/FastSIMD_FastNoise/FastSIMD_FastNoise_NEON.cpp",
+  "file": "/Users/tyler/Programming/ProceduralTerrainGenerator/build/external/FastNoise2/src/fastsimd/FastSIMD_FastNoise/FastSIMD_FastNoise_NEON.cpp",
+  "output": "external/FastNoise2/src/CMakeFiles/FastSIMD_FastNoise.dir/fastsimd/FastSIMD_FastNoise/FastSIMD_FastNoise_NEON.cpp.o"
+},
+{
+  "directory": "/Users/tyler/Programming/ProceduralTerrainGenerator/build/external/FastNoise2/src",
+  "command": "/usr/bin/c++ -DFASTSIMD_EXPORT -DFASTSIMD_IS_RELAXED=1 -DFASTSIMD_LIBRARY_NAME=FastSIMD_FastNoise -DFASTSIMD_STATIC_LIB -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/external/FastNoise2/src/fastsimd/FastSIMD_FastNoise/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/external/FastNoise2/src/../include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/include -g -std=gnu++17 -arch arm64 -fno-stack-protector -Wno-nan-infinity-disabled -mllvm -x86-use-vzeroupper=0 -ffast-math -o CMakeFiles/FastSIMD_FastNoise.dir/fastsimd/FastSIMD_FastNoise/FastSIMD_FastNoise_AARCH64.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/external/FastNoise2/src/fastsimd/FastSIMD_FastNoise/FastSIMD_FastNoise_AARCH64.cpp",
+  "file": "/Users/tyler/Programming/ProceduralTerrainGenerator/build/external/FastNoise2/src/fastsimd/FastSIMD_FastNoise/FastSIMD_FastNoise_AARCH64.cpp",
+  "output": "external/FastNoise2/src/CMakeFiles/FastSIMD_FastNoise.dir/fastsimd/FastSIMD_FastNoise/FastSIMD_FastNoise_AARCH64.cpp.o"
+},
+{
+  "directory": "/Users/tyler/Programming/ProceduralTerrainGenerator/build/external/FastNoise2/src",
+  "command": "/usr/bin/c++ -DFASTNOISE2_VERSION=\\\"1.1.1\\\" -DFASTNOISE_EXPORT -DFASTNOISE_STATIC_LIB -DFASTSIMD_IS_RELAXED=1 -DFASTSIMD_STATIC_LIB -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/external/FastNoise2/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/external/FastNoise2/src/fastsimd/FastSIMD_FastNoise/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/FastNoise.dir/FastNoise/FastNoise_C.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/external/FastNoise2/src/FastNoise/FastNoise_C.cpp",
+  "file": "/Users/tyler/Programming/ProceduralTerrainGenerator/external/FastNoise2/src/FastNoise/FastNoise_C.cpp",
+  "output": "external/FastNoise2/src/CMakeFiles/FastNoise.dir/FastNoise/FastNoise_C.cpp.o"
+},
+{
+  "directory": "/Users/tyler/Programming/ProceduralTerrainGenerator/build/external/FastNoise2/src",
+  "command": "/usr/bin/c++ -DFASTNOISE2_VERSION=\\\"1.1.1\\\" -DFASTNOISE_EXPORT -DFASTNOISE_STATIC_LIB -DFASTSIMD_IS_RELAXED=1 -DFASTSIMD_STATIC_LIB -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/external/FastNoise2/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/external/FastNoise2/src/fastsimd/FastSIMD_FastNoise/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/FastNoise.dir/FastNoise/Metadata.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/external/FastNoise2/src/FastNoise/Metadata.cpp",
+  "file": "/Users/tyler/Programming/ProceduralTerrainGenerator/external/FastNoise2/src/FastNoise/Metadata.cpp",
+  "output": "external/FastNoise2/src/CMakeFiles/FastNoise.dir/FastNoise/Metadata.cpp.o"
+},
+{
+  "directory": "/Users/tyler/Programming/ProceduralTerrainGenerator/build/external/FastNoise2/src",
+  "command": "/usr/bin/c++ -DFASTNOISE2_VERSION=\\\"1.1.1\\\" -DFASTNOISE_EXPORT -DFASTNOISE_STATIC_LIB -DFASTSIMD_IS_RELAXED=1 -DFASTSIMD_STATIC_LIB -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/external/FastNoise2/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/external/FastNoise2/src/fastsimd/FastSIMD_FastNoise/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/FastNoise.dir/FastNoise/SmartNode.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/external/FastNoise2/src/FastNoise/SmartNode.cpp",
+  "file": "/Users/tyler/Programming/ProceduralTerrainGenerator/external/FastNoise2/src/FastNoise/SmartNode.cpp",
+  "output": "external/FastNoise2/src/CMakeFiles/FastNoise.dir/FastNoise/SmartNode.cpp.o"
+},
+{
+  "directory": "/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-build",
+  "command": "/usr/bin/c++ -DFASTSIMD_EXPORT -DFASTSIMD_STATIC_LIB -I/Users/tyler/Programming/ProceduralTerrainGenerator/include -I/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/FastSIMD.dir/src/FastSIMD.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/src/FastSIMD.cpp",
+  "file": "/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/src/FastSIMD.cpp",
+  "output": "_deps/fastsimd-build/CMakeFiles/FastSIMD.dir/src/FastSIMD.cpp.o"
 }
 ]

@@ -4,7 +4,7 @@ This project is an infinite procedural terrain generator programmed in C++.
 
 ## Libraries used
 - OpenGL + GLM + GLFW + Glad
-- FastNoiseLite
+- FastNoise2
 
 ## How to run
 NOTE: This project is made for Mac only use

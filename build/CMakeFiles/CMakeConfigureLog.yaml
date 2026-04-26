@@ -2409,3 +2409,2018 @@ events:
         - "/Network/Library/Frameworks"
         - "/System/Library/Frameworks"
 ...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindGit.cmake:86 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/FetchContent.cmake:1874 (find_package)"
+      - "/opt/homebrew/share/cmake/Modules/FetchContent.cmake:1609 (__FetchContent_populateSubbuild)"
+      - "/opt/homebrew/share/cmake/Modules/FetchContent.cmake:2145:EVAL:2 (__FetchContent_doPopulation)"
+      - "/opt/homebrew/share/cmake/Modules/FetchContent.cmake:2145 (cmake_language)"
+      - "/opt/homebrew/share/cmake/Modules/FetchContent.cmake:2384 (__FetchContent_Populate)"
+      - "external/FastNoise2/cmake/CPM.cmake:1114 (FetchContent_MakeAvailable)"
+      - "external/FastNoise2/cmake/CPM.cmake:895 (cpm_fetch_package)"
+      - "external/FastNoise2/src/CMakeLists.txt:2 (CPMAddPackage)"
+    mode: "program"
+    variable: "GIT_EXECUTABLE"
+    description: "Git command line client"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "git"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/homebrew/"
+      - "/opt/miniconda3/bin/"
+      - "/opt/miniconda3/condabin/"
+      - "/Users/tyler/bin/"
+      - "/opt/homebrew/opt/node@20/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Applications/Wireshark.app/Contents/MacOS/"
+      - "/usr/local/share/dotnet/"
+      - "/Users/tyler/.dotnet/tools/"
+      - "/Users/tyler/.sdkman/candidates/scala/current/bin/"
+      - "/Users/tyler/.sdkman/candidates/sbt/current/bin/"
+      - "/Users/tyler/.sdkman/candidates/java/current/bin/"
+      - "/Users/tyler/.cargo/bin/"
+      - "/Applications/Ghostty.app/Contents/MacOS/"
+      - "/usr/local/bin/docker-compose/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/bin/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/sbin/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/"
+      - "/usr/bin/"
+      - "/usr/sbin/"
+      - "/usr/"
+      - "/bin/"
+      - "/sbin/"
+      - "/usr/X11R6/bin/"
+      - "/usr/X11R6/sbin/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/bin/"
+      - "/usr/pkg/sbin/"
+      - "/usr/pkg/"
+      - "/opt/bin/"
+      - "/opt/sbin/"
+      - "/opt/"
+      - "/sw/bin/"
+      - "/sw/sbin/"
+      - "/sw/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/opt/local/"
+      - "/Users/tyler/Applications/"
+      - "/Applications/"
+    searched_directories:
+      - "/opt/homebrew/bin/git"
+      - "/opt/homebrew/sbin/git"
+      - "/opt/homebrew/git"
+      - "/opt/miniconda3/bin/git"
+      - "/opt/miniconda3/condabin/git"
+      - "/Users/tyler/bin/git"
+      - "/opt/homebrew/opt/node@20/bin/git"
+      - "/opt/homebrew/bin/git"
+      - "/opt/homebrew/sbin/git"
+      - "/usr/local/bin/git"
+      - "/System/Cryptexes/App/usr/bin/git"
+    found: "/usr/bin/git"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/opt/homebrew"
+      ENV{PATH}:
+        - "/opt/miniconda3/bin"
+        - "/opt/miniconda3/condabin"
+        - "/Users/tyler/bin"
+        - "/opt/homebrew/opt/node@20/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Applications/Wireshark.app/Contents/MacOS"
+        - "/usr/local/share/dotnet"
+        - "~/.dotnet/tools"
+        - "/Users/tyler/.sdkman/candidates/scala/current/bin"
+        - "/Users/tyler/.sdkman/candidates/sbt/current/bin"
+        - "/Users/tyler/.sdkman/candidates/java/current/bin"
+        - "/opt/miniconda3/bin"
+        - "/opt/miniconda3/condabin"
+        - "/Users/tyler/bin"
+        - "/opt/homebrew/opt/node@20/bin"
+        - "/Users/tyler/.cargo/bin"
+        - "/Applications/Ghostty.app/Contents/MacOS"
+        - "/usr/local/bin/docker-compose"
+        - "/usr/local/bin/docker-compose"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_APPBUNDLE_PATH:
+        - "/Users/tyler/Applications"
+        - "/Applications"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/cmake/ArchDetect.cmake:15 (try_compile)"
+      - "build/_deps/fastsimd-src/CMakeLists.txt:22 (target_architecture)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_0630e/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_0630e.dir/build.make CMakeFiles/cmTC_0630e.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_0630e.dir/ArchDetect.cpp.o
+        /usr/bin/c++   -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_0630e.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_0630e.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_0630e.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:15:16: error: static assertion failed: FASTSIMD_ARCH<ARM=AARCH64>
+           15 | static_assert( 0, "FASTSIMD_ARCH<" TO_LITERAL( FASTSIMD_ARCH_NAME() ) ">" );
+              |                ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:18:1: error: expected unqualified-id
+           18 | TO_LITERAL( FASTSIMD_ARCH<FASTSIMD_ARCH_NAME()> );
+              | ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:4:30: note: expanded from macro 'TO_LITERAL'
+            4 | #define TO_LITERAL( string ) TO_LITERAL_( string )
+              |                              ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:3:31: note: expanded from macro 'TO_LITERAL_'
+            3 | #define TO_LITERAL_( string ) #string
+              |                               ^
+        <scratch space>:5:1: note: expanded from here
+            5 | "FASTSIMD_ARCH<ARM=AARCH64>"
+              | ^
+        2 errors generated.
+        gmake[1]: *** [CMakeFiles/cmTC_0630e.dir/build.make:82: CMakeFiles/cmTC_0630e.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_0630e/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_ea3e9/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_ea3e9.dir/build.make CMakeFiles/cmTC_ea3e9.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_ea3e9.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=SSE2  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_ea3e9.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_ea3e9.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_ea3e9.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:9:5: error: function-like macro 'FASTSIMD_FEATURE_VALUE_SSE2' is not defined
+            9 | #if FASTSIMD_FEATURE_VALUE( TEST_FEATURE_SET_ACTIVE ) > 0
+              |     ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:91:43: note: expanded from macro 'FASTSIMD_FEATURE_VALUE'
+           91 | #define FASTSIMD_FEATURE_VALUE( feature ) FASTSIMD_FEATURE_VALUE_IMPL( feature )
+              |                                           ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:92:48: note: expanded from macro 'FASTSIMD_FEATURE_VALUE_IMPL'
+           92 | #define FASTSIMD_FEATURE_VALUE_IMPL( feature ) FASTSIMD_FEATURE_VALUE_##feature()
+              |                                                ^
+        <scratch space>:4:1: note: expanded from here
+            4 | FASTSIMD_FEATURE_VALUE_SSE2
+              | ^
+        1 error generated.
+        gmake[1]: *** [CMakeFiles/cmTC_ea3e9.dir/build.make:82: CMakeFiles/cmTC_ea3e9.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_ea3e9/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_58a3c/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_58a3c.dir/build.make CMakeFiles/cmTC_58a3c.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_58a3c.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=SSE41  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_58a3c.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_58a3c.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_58a3c.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:9:5: error: function-like macro 'FASTSIMD_FEATURE_VALUE_SSE41' is not defined
+            9 | #if FASTSIMD_FEATURE_VALUE( TEST_FEATURE_SET_ACTIVE ) > 0
+              |     ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:91:43: note: expanded from macro 'FASTSIMD_FEATURE_VALUE'
+           91 | #define FASTSIMD_FEATURE_VALUE( feature ) FASTSIMD_FEATURE_VALUE_IMPL( feature )
+              |                                           ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:92:48: note: expanded from macro 'FASTSIMD_FEATURE_VALUE_IMPL'
+           92 | #define FASTSIMD_FEATURE_VALUE_IMPL( feature ) FASTSIMD_FEATURE_VALUE_##feature()
+              |                                                ^
+        <scratch space>:4:1: note: expanded from here
+            4 | FASTSIMD_FEATURE_VALUE_SSE41
+              | ^
+        1 error generated.
+        gmake[1]: *** [CMakeFiles/cmTC_58a3c.dir/build.make:82: CMakeFiles/cmTC_58a3c.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_58a3c/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_0896e/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_0896e.dir/build.make CMakeFiles/cmTC_0896e.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_0896e.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=AVX2  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_0896e.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_0896e.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_0896e.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:9:5: error: function-like macro 'FASTSIMD_FEATURE_VALUE_AVX2' is not defined
+            9 | #if FASTSIMD_FEATURE_VALUE( TEST_FEATURE_SET_ACTIVE ) > 0
+              |     ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:91:43: note: expanded from macro 'FASTSIMD_FEATURE_VALUE'
+           91 | #define FASTSIMD_FEATURE_VALUE( feature ) FASTSIMD_FEATURE_VALUE_IMPL( feature )
+              |                                           ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:92:48: note: expanded from macro 'FASTSIMD_FEATURE_VALUE_IMPL'
+           92 | #define FASTSIMD_FEATURE_VALUE_IMPL( feature ) FASTSIMD_FEATURE_VALUE_##feature()
+              |                                                ^
+        <scratch space>:4:1: note: expanded from here
+            4 | FASTSIMD_FEATURE_VALUE_AVX2
+              | ^
+        1 error generated.
+        gmake[1]: *** [CMakeFiles/cmTC_0896e.dir/build.make:82: CMakeFiles/cmTC_0896e.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_0896e/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_c52dc/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_c52dc.dir/build.make CMakeFiles/cmTC_c52dc.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_c52dc.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=AVX512  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_c52dc.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_c52dc.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_c52dc.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:9:5: error: function-like macro 'FASTSIMD_FEATURE_VALUE_AVX512' is not defined
+            9 | #if FASTSIMD_FEATURE_VALUE( TEST_FEATURE_SET_ACTIVE ) > 0
+              |     ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:91:43: note: expanded from macro 'FASTSIMD_FEATURE_VALUE'
+           91 | #define FASTSIMD_FEATURE_VALUE( feature ) FASTSIMD_FEATURE_VALUE_IMPL( feature )
+              |                                           ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:92:48: note: expanded from macro 'FASTSIMD_FEATURE_VALUE_IMPL'
+           92 | #define FASTSIMD_FEATURE_VALUE_IMPL( feature ) FASTSIMD_FEATURE_VALUE_##feature()
+              |                                                ^
+        <scratch space>:4:1: note: expanded from here
+            4 | FASTSIMD_FEATURE_VALUE_AVX512
+              | ^
+        1 error generated.
+        gmake[1]: *** [CMakeFiles/cmTC_c52dc.dir/build.make:82: CMakeFiles/cmTC_c52dc.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_c52dc/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_b1618/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_b1618.dir/build.make CMakeFiles/cmTC_b1618.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_b1618.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=NEON  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_b1618.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_b1618.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_b1618.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:15:16: error: static assertion failed: FASTSIMD_ARCH<ARM=AARCH64>
+           15 | static_assert( 0, "FASTSIMD_ARCH<" TO_LITERAL( FASTSIMD_ARCH_NAME() ) ">" );
+              |                ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:18:1: error: expected unqualified-id
+           18 | TO_LITERAL( FASTSIMD_ARCH<FASTSIMD_ARCH_NAME()> );
+              | ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:4:30: note: expanded from macro 'TO_LITERAL'
+            4 | #define TO_LITERAL( string ) TO_LITERAL_( string )
+              |                              ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:3:31: note: expanded from macro 'TO_LITERAL_'
+            3 | #define TO_LITERAL_( string ) #string
+              |                               ^
+        <scratch space>:6:1: note: expanded from here
+            6 | "FASTSIMD_ARCH<ARM=AARCH64>"
+              | ^
+        2 errors generated.
+        gmake[1]: *** [CMakeFiles/cmTC_b1618.dir/build.make:82: CMakeFiles/cmTC_b1618.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_b1618/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_dc927/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_dc927.dir/build.make CMakeFiles/cmTC_dc927.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_dc927.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=AARCH64  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_dc927.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_dc927.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_dc927.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:15:16: error: static assertion failed: FASTSIMD_ARCH<ARM=AARCH64>
+           15 | static_assert( 0, "FASTSIMD_ARCH<" TO_LITERAL( FASTSIMD_ARCH_NAME() ) ">" );
+              |                ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:18:1: error: expected unqualified-id
+           18 | TO_LITERAL( FASTSIMD_ARCH<FASTSIMD_ARCH_NAME()> );
+              | ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:4:30: note: expanded from macro 'TO_LITERAL'
+            4 | #define TO_LITERAL( string ) TO_LITERAL_( string )
+              |                              ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:3:31: note: expanded from macro 'TO_LITERAL_'
+            3 | #define TO_LITERAL_( string ) #string
+              |                               ^
+        <scratch space>:6:1: note: expanded from here
+            6 | "FASTSIMD_ARCH<ARM=AARCH64>"
+              | ^
+        2 errors generated.
+        gmake[1]: *** [CMakeFiles/cmTC_dc927.dir/build.make:82: CMakeFiles/cmTC_dc927.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_dc927/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_1fa2d/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_1fa2d.dir/build.make CMakeFiles/cmTC_1fa2d.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_1fa2d.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=WASM  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_1fa2d.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_1fa2d.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_1fa2d.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:9:5: error: function-like macro 'FASTSIMD_FEATURE_VALUE_WASM' is not defined
+            9 | #if FASTSIMD_FEATURE_VALUE( TEST_FEATURE_SET_ACTIVE ) > 0
+              |     ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:91:43: note: expanded from macro 'FASTSIMD_FEATURE_VALUE'
+           91 | #define FASTSIMD_FEATURE_VALUE( feature ) FASTSIMD_FEATURE_VALUE_IMPL( feature )
+              |                                           ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:92:48: note: expanded from macro 'FASTSIMD_FEATURE_VALUE_IMPL'
+           92 | #define FASTSIMD_FEATURE_VALUE_IMPL( feature ) FASTSIMD_FEATURE_VALUE_##feature()
+              |                                                ^
+        <scratch space>:4:1: note: expanded from here
+            4 | FASTSIMD_FEATURE_VALUE_WASM
+              | ^
+        1 error generated.
+        gmake[1]: *** [CMakeFiles/cmTC_1fa2d.dir/build.make:82: CMakeFiles/cmTC_1fa2d.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_1fa2d/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/cmake/ArchDetect.cmake:15 (try_compile)"
+      - "build/_deps/fastsimd-src/CMakeLists.txt:22 (target_architecture)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_15e8d/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_15e8d.dir/build.make CMakeFiles/cmTC_15e8d.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_15e8d.dir/ArchDetect.cpp.o
+        /usr/bin/c++   -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_15e8d.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_15e8d.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_15e8d.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:15:16: error: static assertion failed: FASTSIMD_ARCH<ARM=AARCH64>
+           15 | static_assert( 0, "FASTSIMD_ARCH<" TO_LITERAL( FASTSIMD_ARCH_NAME() ) ">" );
+              |                ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:18:1: error: expected unqualified-id
+           18 | TO_LITERAL( FASTSIMD_ARCH<FASTSIMD_ARCH_NAME()> );
+              | ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:4:30: note: expanded from macro 'TO_LITERAL'
+            4 | #define TO_LITERAL( string ) TO_LITERAL_( string )
+              |                              ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:3:31: note: expanded from macro 'TO_LITERAL_'
+            3 | #define TO_LITERAL_( string ) #string
+              |                               ^
+        <scratch space>:5:1: note: expanded from here
+            5 | "FASTSIMD_ARCH<ARM=AARCH64>"
+              | ^
+        2 errors generated.
+        gmake[1]: *** [CMakeFiles/cmTC_15e8d.dir/build.make:82: CMakeFiles/cmTC_15e8d.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_15e8d/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_45674/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_45674.dir/build.make CMakeFiles/cmTC_45674.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_45674.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=SSE2  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_45674.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_45674.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_45674.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:9:5: error: function-like macro 'FASTSIMD_FEATURE_VALUE_SSE2' is not defined
+            9 | #if FASTSIMD_FEATURE_VALUE( TEST_FEATURE_SET_ACTIVE ) > 0
+              |     ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:91:43: note: expanded from macro 'FASTSIMD_FEATURE_VALUE'
+           91 | #define FASTSIMD_FEATURE_VALUE( feature ) FASTSIMD_FEATURE_VALUE_IMPL( feature )
+              |                                           ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:92:48: note: expanded from macro 'FASTSIMD_FEATURE_VALUE_IMPL'
+           92 | #define FASTSIMD_FEATURE_VALUE_IMPL( feature ) FASTSIMD_FEATURE_VALUE_##feature()
+              |                                                ^
+        <scratch space>:4:1: note: expanded from here
+            4 | FASTSIMD_FEATURE_VALUE_SSE2
+              | ^
+        1 error generated.
+        gmake[1]: *** [CMakeFiles/cmTC_45674.dir/build.make:82: CMakeFiles/cmTC_45674.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_45674/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_d06be/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_d06be.dir/build.make CMakeFiles/cmTC_d06be.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_d06be.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=SSE41  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_d06be.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_d06be.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_d06be.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:9:5: error: function-like macro 'FASTSIMD_FEATURE_VALUE_SSE41' is not defined
+            9 | #if FASTSIMD_FEATURE_VALUE( TEST_FEATURE_SET_ACTIVE ) > 0
+              |     ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:91:43: note: expanded from macro 'FASTSIMD_FEATURE_VALUE'
+           91 | #define FASTSIMD_FEATURE_VALUE( feature ) FASTSIMD_FEATURE_VALUE_IMPL( feature )
+              |                                           ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:92:48: note: expanded from macro 'FASTSIMD_FEATURE_VALUE_IMPL'
+           92 | #define FASTSIMD_FEATURE_VALUE_IMPL( feature ) FASTSIMD_FEATURE_VALUE_##feature()
+              |                                                ^
+        <scratch space>:4:1: note: expanded from here
+            4 | FASTSIMD_FEATURE_VALUE_SSE41
+              | ^
+        1 error generated.
+        gmake[1]: *** [CMakeFiles/cmTC_d06be.dir/build.make:82: CMakeFiles/cmTC_d06be.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_d06be/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_11ee2/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_11ee2.dir/build.make CMakeFiles/cmTC_11ee2.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_11ee2.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=AVX2  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_11ee2.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_11ee2.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_11ee2.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:9:5: error: function-like macro 'FASTSIMD_FEATURE_VALUE_AVX2' is not defined
+            9 | #if FASTSIMD_FEATURE_VALUE( TEST_FEATURE_SET_ACTIVE ) > 0
+              |     ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:91:43: note: expanded from macro 'FASTSIMD_FEATURE_VALUE'
+           91 | #define FASTSIMD_FEATURE_VALUE( feature ) FASTSIMD_FEATURE_VALUE_IMPL( feature )
+              |                                           ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:92:48: note: expanded from macro 'FASTSIMD_FEATURE_VALUE_IMPL'
+           92 | #define FASTSIMD_FEATURE_VALUE_IMPL( feature ) FASTSIMD_FEATURE_VALUE_##feature()
+              |                                                ^
+        <scratch space>:4:1: note: expanded from here
+            4 | FASTSIMD_FEATURE_VALUE_AVX2
+              | ^
+        1 error generated.
+        gmake[1]: *** [CMakeFiles/cmTC_11ee2.dir/build.make:82: CMakeFiles/cmTC_11ee2.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_11ee2/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_4f53d/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_4f53d.dir/build.make CMakeFiles/cmTC_4f53d.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_4f53d.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=AVX512  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_4f53d.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_4f53d.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_4f53d.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:9:5: error: function-like macro 'FASTSIMD_FEATURE_VALUE_AVX512' is not defined
+            9 | #if FASTSIMD_FEATURE_VALUE( TEST_FEATURE_SET_ACTIVE ) > 0
+              |     ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:91:43: note: expanded from macro 'FASTSIMD_FEATURE_VALUE'
+           91 | #define FASTSIMD_FEATURE_VALUE( feature ) FASTSIMD_FEATURE_VALUE_IMPL( feature )
+              |                                           ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:92:48: note: expanded from macro 'FASTSIMD_FEATURE_VALUE_IMPL'
+           92 | #define FASTSIMD_FEATURE_VALUE_IMPL( feature ) FASTSIMD_FEATURE_VALUE_##feature()
+              |                                                ^
+        <scratch space>:4:1: note: expanded from here
+            4 | FASTSIMD_FEATURE_VALUE_AVX512
+              | ^
+        1 error generated.
+        gmake[1]: *** [CMakeFiles/cmTC_4f53d.dir/build.make:82: CMakeFiles/cmTC_4f53d.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_4f53d/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_0dc2a/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_0dc2a.dir/build.make CMakeFiles/cmTC_0dc2a.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_0dc2a.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=NEON  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_0dc2a.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_0dc2a.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_0dc2a.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:15:16: error: static assertion failed: FASTSIMD_ARCH<ARM=AARCH64>
+           15 | static_assert( 0, "FASTSIMD_ARCH<" TO_LITERAL( FASTSIMD_ARCH_NAME() ) ">" );
+              |                ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:18:1: error: expected unqualified-id
+           18 | TO_LITERAL( FASTSIMD_ARCH<FASTSIMD_ARCH_NAME()> );
+              | ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:4:30: note: expanded from macro 'TO_LITERAL'
+            4 | #define TO_LITERAL( string ) TO_LITERAL_( string )
+              |                              ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:3:31: note: expanded from macro 'TO_LITERAL_'
+            3 | #define TO_LITERAL_( string ) #string
+              |                               ^
+        <scratch space>:6:1: note: expanded from here
+            6 | "FASTSIMD_ARCH<ARM=AARCH64>"
+              | ^
+        2 errors generated.
+        gmake[1]: *** [CMakeFiles/cmTC_0dc2a.dir/build.make:82: CMakeFiles/cmTC_0dc2a.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_0dc2a/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_5e8de/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_5e8de.dir/build.make CMakeFiles/cmTC_5e8de.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_5e8de.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=AARCH64  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_5e8de.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_5e8de.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_5e8de.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:15:16: error: static assertion failed: FASTSIMD_ARCH<ARM=AARCH64>
+           15 | static_assert( 0, "FASTSIMD_ARCH<" TO_LITERAL( FASTSIMD_ARCH_NAME() ) ">" );
+              |                ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:18:1: error: expected unqualified-id
+           18 | TO_LITERAL( FASTSIMD_ARCH<FASTSIMD_ARCH_NAME()> );
+              | ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:4:30: note: expanded from macro 'TO_LITERAL'
+            4 | #define TO_LITERAL( string ) TO_LITERAL_( string )
+              |                              ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:3:31: note: expanded from macro 'TO_LITERAL_'
+            3 | #define TO_LITERAL_( string ) #string
+              |                               ^
+        <scratch space>:6:1: note: expanded from here
+            6 | "FASTSIMD_ARCH<ARM=AARCH64>"
+              | ^
+        2 errors generated.
+        gmake[1]: *** [CMakeFiles/cmTC_5e8de.dir/build.make:82: CMakeFiles/cmTC_5e8de.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_5e8de/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_db00b/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_db00b.dir/build.make CMakeFiles/cmTC_db00b.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_db00b.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=WASM  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_db00b.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_db00b.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_db00b.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:9:5: error: function-like macro 'FASTSIMD_FEATURE_VALUE_WASM' is not defined
+            9 | #if FASTSIMD_FEATURE_VALUE( TEST_FEATURE_SET_ACTIVE ) > 0
+              |     ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:91:43: note: expanded from macro 'FASTSIMD_FEATURE_VALUE'
+           91 | #define FASTSIMD_FEATURE_VALUE( feature ) FASTSIMD_FEATURE_VALUE_IMPL( feature )
+              |                                           ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:92:48: note: expanded from macro 'FASTSIMD_FEATURE_VALUE_IMPL'
+           92 | #define FASTSIMD_FEATURE_VALUE_IMPL( feature ) FASTSIMD_FEATURE_VALUE_##feature()
+              |                                                ^
+        <scratch space>:4:1: note: expanded from here
+            4 | FASTSIMD_FEATURE_VALUE_WASM
+              | ^
+        1 error generated.
+        gmake[1]: *** [CMakeFiles/cmTC_db00b.dir/build.make:82: CMakeFiles/cmTC_db00b.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_db00b/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/cmake/ArchDetect.cmake:15 (try_compile)"
+      - "build/_deps/fastsimd-src/CMakeLists.txt:22 (target_architecture)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_97d03/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_97d03.dir/build.make CMakeFiles/cmTC_97d03.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_97d03.dir/ArchDetect.cpp.o
+        /usr/bin/c++   -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_97d03.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_97d03.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_97d03.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:15:16: error: static assertion failed: FASTSIMD_ARCH<ARM=AARCH64>
+           15 | static_assert( 0, "FASTSIMD_ARCH<" TO_LITERAL( FASTSIMD_ARCH_NAME() ) ">" );
+              |                ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:18:1: error: expected unqualified-id
+           18 | TO_LITERAL( FASTSIMD_ARCH<FASTSIMD_ARCH_NAME()> );
+              | ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:4:30: note: expanded from macro 'TO_LITERAL'
+            4 | #define TO_LITERAL( string ) TO_LITERAL_( string )
+              |                              ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:3:31: note: expanded from macro 'TO_LITERAL_'
+            3 | #define TO_LITERAL_( string ) #string
+              |                               ^
+        <scratch space>:5:1: note: expanded from here
+            5 | "FASTSIMD_ARCH<ARM=AARCH64>"
+              | ^
+        2 errors generated.
+        gmake[1]: *** [CMakeFiles/cmTC_97d03.dir/build.make:82: CMakeFiles/cmTC_97d03.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_97d03/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_91973/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_91973.dir/build.make CMakeFiles/cmTC_91973.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_91973.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=SSE2  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_91973.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_91973.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_91973.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:9:5: error: function-like macro 'FASTSIMD_FEATURE_VALUE_SSE2' is not defined
+            9 | #if FASTSIMD_FEATURE_VALUE( TEST_FEATURE_SET_ACTIVE ) > 0
+              |     ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:91:43: note: expanded from macro 'FASTSIMD_FEATURE_VALUE'
+           91 | #define FASTSIMD_FEATURE_VALUE( feature ) FASTSIMD_FEATURE_VALUE_IMPL( feature )
+              |                                           ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:92:48: note: expanded from macro 'FASTSIMD_FEATURE_VALUE_IMPL'
+           92 | #define FASTSIMD_FEATURE_VALUE_IMPL( feature ) FASTSIMD_FEATURE_VALUE_##feature()
+              |                                                ^
+        <scratch space>:4:1: note: expanded from here
+            4 | FASTSIMD_FEATURE_VALUE_SSE2
+              | ^
+        1 error generated.
+        gmake[1]: *** [CMakeFiles/cmTC_91973.dir/build.make:82: CMakeFiles/cmTC_91973.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_91973/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_3699a/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_3699a.dir/build.make CMakeFiles/cmTC_3699a.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_3699a.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=SSE41  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_3699a.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_3699a.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_3699a.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:9:5: error: function-like macro 'FASTSIMD_FEATURE_VALUE_SSE41' is not defined
+            9 | #if FASTSIMD_FEATURE_VALUE( TEST_FEATURE_SET_ACTIVE ) > 0
+              |     ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:91:43: note: expanded from macro 'FASTSIMD_FEATURE_VALUE'
+           91 | #define FASTSIMD_FEATURE_VALUE( feature ) FASTSIMD_FEATURE_VALUE_IMPL( feature )
+              |                                           ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:92:48: note: expanded from macro 'FASTSIMD_FEATURE_VALUE_IMPL'
+           92 | #define FASTSIMD_FEATURE_VALUE_IMPL( feature ) FASTSIMD_FEATURE_VALUE_##feature()
+              |                                                ^
+        <scratch space>:4:1: note: expanded from here
+            4 | FASTSIMD_FEATURE_VALUE_SSE41
+              | ^
+        1 error generated.
+        gmake[1]: *** [CMakeFiles/cmTC_3699a.dir/build.make:82: CMakeFiles/cmTC_3699a.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_3699a/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_009d0/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_009d0.dir/build.make CMakeFiles/cmTC_009d0.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_009d0.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=AVX2  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_009d0.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_009d0.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_009d0.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:9:5: error: function-like macro 'FASTSIMD_FEATURE_VALUE_AVX2' is not defined
+            9 | #if FASTSIMD_FEATURE_VALUE( TEST_FEATURE_SET_ACTIVE ) > 0
+              |     ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:91:43: note: expanded from macro 'FASTSIMD_FEATURE_VALUE'
+           91 | #define FASTSIMD_FEATURE_VALUE( feature ) FASTSIMD_FEATURE_VALUE_IMPL( feature )
+              |                                           ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:92:48: note: expanded from macro 'FASTSIMD_FEATURE_VALUE_IMPL'
+           92 | #define FASTSIMD_FEATURE_VALUE_IMPL( feature ) FASTSIMD_FEATURE_VALUE_##feature()
+              |                                                ^
+        <scratch space>:4:1: note: expanded from here
+            4 | FASTSIMD_FEATURE_VALUE_AVX2
+              | ^
+        1 error generated.
+        gmake[1]: *** [CMakeFiles/cmTC_009d0.dir/build.make:82: CMakeFiles/cmTC_009d0.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_009d0/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_c0f18/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_c0f18.dir/build.make CMakeFiles/cmTC_c0f18.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_c0f18.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=AVX512  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_c0f18.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_c0f18.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_c0f18.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:9:5: error: function-like macro 'FASTSIMD_FEATURE_VALUE_AVX512' is not defined
+            9 | #if FASTSIMD_FEATURE_VALUE( TEST_FEATURE_SET_ACTIVE ) > 0
+              |     ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:91:43: note: expanded from macro 'FASTSIMD_FEATURE_VALUE'
+           91 | #define FASTSIMD_FEATURE_VALUE( feature ) FASTSIMD_FEATURE_VALUE_IMPL( feature )
+              |                                           ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:92:48: note: expanded from macro 'FASTSIMD_FEATURE_VALUE_IMPL'
+           92 | #define FASTSIMD_FEATURE_VALUE_IMPL( feature ) FASTSIMD_FEATURE_VALUE_##feature()
+              |                                                ^
+        <scratch space>:4:1: note: expanded from here
+            4 | FASTSIMD_FEATURE_VALUE_AVX512
+              | ^
+        1 error generated.
+        gmake[1]: *** [CMakeFiles/cmTC_c0f18.dir/build.make:82: CMakeFiles/cmTC_c0f18.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_c0f18/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_22268/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_22268.dir/build.make CMakeFiles/cmTC_22268.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_22268.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=NEON  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_22268.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_22268.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_22268.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:15:16: error: static assertion failed: FASTSIMD_ARCH<ARM=AARCH64>
+           15 | static_assert( 0, "FASTSIMD_ARCH<" TO_LITERAL( FASTSIMD_ARCH_NAME() ) ">" );
+              |                ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:18:1: error: expected unqualified-id
+           18 | TO_LITERAL( FASTSIMD_ARCH<FASTSIMD_ARCH_NAME()> );
+              | ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:4:30: note: expanded from macro 'TO_LITERAL'
+            4 | #define TO_LITERAL( string ) TO_LITERAL_( string )
+              |                              ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:3:31: note: expanded from macro 'TO_LITERAL_'
+            3 | #define TO_LITERAL_( string ) #string
+              |                               ^
+        <scratch space>:6:1: note: expanded from here
+            6 | "FASTSIMD_ARCH<ARM=AARCH64>"
+              | ^
+        2 errors generated.
+        gmake[1]: *** [CMakeFiles/cmTC_22268.dir/build.make:82: CMakeFiles/cmTC_22268.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_22268/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_119a4/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_119a4.dir/build.make CMakeFiles/cmTC_119a4.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_119a4.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=AARCH64  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_119a4.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_119a4.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_119a4.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:15:16: error: static assertion failed: FASTSIMD_ARCH<ARM=AARCH64>
+           15 | static_assert( 0, "FASTSIMD_ARCH<" TO_LITERAL( FASTSIMD_ARCH_NAME() ) ">" );
+              |                ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:18:1: error: expected unqualified-id
+           18 | TO_LITERAL( FASTSIMD_ARCH<FASTSIMD_ARCH_NAME()> );
+              | ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:4:30: note: expanded from macro 'TO_LITERAL'
+            4 | #define TO_LITERAL( string ) TO_LITERAL_( string )
+              |                              ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:3:31: note: expanded from macro 'TO_LITERAL_'
+            3 | #define TO_LITERAL_( string ) #string
+              |                               ^
+        <scratch space>:6:1: note: expanded from here
+            6 | "FASTSIMD_ARCH<ARM=AARCH64>"
+              | ^
+        2 errors generated.
+        gmake[1]: *** [CMakeFiles/cmTC_119a4.dir/build.make:82: CMakeFiles/cmTC_119a4.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_119a4/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_f978d/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_f978d.dir/build.make CMakeFiles/cmTC_f978d.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_f978d.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=WASM  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_f978d.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_f978d.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_f978d.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:9:5: error: function-like macro 'FASTSIMD_FEATURE_VALUE_WASM' is not defined
+            9 | #if FASTSIMD_FEATURE_VALUE( TEST_FEATURE_SET_ACTIVE ) > 0
+              |     ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:91:43: note: expanded from macro 'FASTSIMD_FEATURE_VALUE'
+           91 | #define FASTSIMD_FEATURE_VALUE( feature ) FASTSIMD_FEATURE_VALUE_IMPL( feature )
+              |                                           ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:92:48: note: expanded from macro 'FASTSIMD_FEATURE_VALUE_IMPL'
+           92 | #define FASTSIMD_FEATURE_VALUE_IMPL( feature ) FASTSIMD_FEATURE_VALUE_##feature()
+              |                                                ^
+        <scratch space>:4:1: note: expanded from here
+            4 | FASTSIMD_FEATURE_VALUE_WASM
+              | ^
+        1 error generated.
+        gmake[1]: *** [CMakeFiles/cmTC_f978d.dir/build.make:82: CMakeFiles/cmTC_f978d.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_f978d/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/cmake/ArchDetect.cmake:15 (try_compile)"
+      - "build/_deps/fastsimd-src/CMakeLists.txt:22 (target_architecture)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_36fe8/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_36fe8.dir/build.make CMakeFiles/cmTC_36fe8.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_36fe8.dir/ArchDetect.cpp.o
+        /usr/bin/c++   -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_36fe8.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_36fe8.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_36fe8.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:15:16: error: static assertion failed: FASTSIMD_ARCH<ARM=AARCH64>
+           15 | static_assert( 0, "FASTSIMD_ARCH<" TO_LITERAL( FASTSIMD_ARCH_NAME() ) ">" );
+              |                ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:18:1: error: expected unqualified-id
+           18 | TO_LITERAL( FASTSIMD_ARCH<FASTSIMD_ARCH_NAME()> );
+              | ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:4:30: note: expanded from macro 'TO_LITERAL'
+            4 | #define TO_LITERAL( string ) TO_LITERAL_( string )
+              |                              ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:3:31: note: expanded from macro 'TO_LITERAL_'
+            3 | #define TO_LITERAL_( string ) #string
+              |                               ^
+        <scratch space>:5:1: note: expanded from here
+            5 | "FASTSIMD_ARCH<ARM=AARCH64>"
+              | ^
+        2 errors generated.
+        gmake[1]: *** [CMakeFiles/cmTC_36fe8.dir/build.make:82: CMakeFiles/cmTC_36fe8.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_36fe8/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_93021/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_93021.dir/build.make CMakeFiles/cmTC_93021.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_93021.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=SSE2  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_93021.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_93021.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_93021.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:9:5: error: function-like macro 'FASTSIMD_FEATURE_VALUE_SSE2' is not defined
+            9 | #if FASTSIMD_FEATURE_VALUE( TEST_FEATURE_SET_ACTIVE ) > 0
+              |     ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:91:43: note: expanded from macro 'FASTSIMD_FEATURE_VALUE'
+           91 | #define FASTSIMD_FEATURE_VALUE( feature ) FASTSIMD_FEATURE_VALUE_IMPL( feature )
+              |                                           ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:92:48: note: expanded from macro 'FASTSIMD_FEATURE_VALUE_IMPL'
+           92 | #define FASTSIMD_FEATURE_VALUE_IMPL( feature ) FASTSIMD_FEATURE_VALUE_##feature()
+              |                                                ^
+        <scratch space>:4:1: note: expanded from here
+            4 | FASTSIMD_FEATURE_VALUE_SSE2
+              | ^
+        1 error generated.
+        gmake[1]: *** [CMakeFiles/cmTC_93021.dir/build.make:82: CMakeFiles/cmTC_93021.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_93021/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_6ba86/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_6ba86.dir/build.make CMakeFiles/cmTC_6ba86.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_6ba86.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=SSE41  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_6ba86.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_6ba86.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_6ba86.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:9:5: error: function-like macro 'FASTSIMD_FEATURE_VALUE_SSE41' is not defined
+            9 | #if FASTSIMD_FEATURE_VALUE( TEST_FEATURE_SET_ACTIVE ) > 0
+              |     ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:91:43: note: expanded from macro 'FASTSIMD_FEATURE_VALUE'
+           91 | #define FASTSIMD_FEATURE_VALUE( feature ) FASTSIMD_FEATURE_VALUE_IMPL( feature )
+              |                                           ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:92:48: note: expanded from macro 'FASTSIMD_FEATURE_VALUE_IMPL'
+           92 | #define FASTSIMD_FEATURE_VALUE_IMPL( feature ) FASTSIMD_FEATURE_VALUE_##feature()
+              |                                                ^
+        <scratch space>:4:1: note: expanded from here
+            4 | FASTSIMD_FEATURE_VALUE_SSE41
+              | ^
+        1 error generated.
+        gmake[1]: *** [CMakeFiles/cmTC_6ba86.dir/build.make:82: CMakeFiles/cmTC_6ba86.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_6ba86/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_98af1/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_98af1.dir/build.make CMakeFiles/cmTC_98af1.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_98af1.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=AVX2  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_98af1.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_98af1.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_98af1.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:9:5: error: function-like macro 'FASTSIMD_FEATURE_VALUE_AVX2' is not defined
+            9 | #if FASTSIMD_FEATURE_VALUE( TEST_FEATURE_SET_ACTIVE ) > 0
+              |     ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:91:43: note: expanded from macro 'FASTSIMD_FEATURE_VALUE'
+           91 | #define FASTSIMD_FEATURE_VALUE( feature ) FASTSIMD_FEATURE_VALUE_IMPL( feature )
+              |                                           ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:92:48: note: expanded from macro 'FASTSIMD_FEATURE_VALUE_IMPL'
+           92 | #define FASTSIMD_FEATURE_VALUE_IMPL( feature ) FASTSIMD_FEATURE_VALUE_##feature()
+              |                                                ^
+        <scratch space>:4:1: note: expanded from here
+            4 | FASTSIMD_FEATURE_VALUE_AVX2
+              | ^
+        1 error generated.
+        gmake[1]: *** [CMakeFiles/cmTC_98af1.dir/build.make:82: CMakeFiles/cmTC_98af1.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_98af1/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_df973/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_df973.dir/build.make CMakeFiles/cmTC_df973.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_df973.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=AVX512  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_df973.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_df973.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_df973.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:9:5: error: function-like macro 'FASTSIMD_FEATURE_VALUE_AVX512' is not defined
+            9 | #if FASTSIMD_FEATURE_VALUE( TEST_FEATURE_SET_ACTIVE ) > 0
+              |     ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:91:43: note: expanded from macro 'FASTSIMD_FEATURE_VALUE'
+           91 | #define FASTSIMD_FEATURE_VALUE( feature ) FASTSIMD_FEATURE_VALUE_IMPL( feature )
+              |                                           ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:92:48: note: expanded from macro 'FASTSIMD_FEATURE_VALUE_IMPL'
+           92 | #define FASTSIMD_FEATURE_VALUE_IMPL( feature ) FASTSIMD_FEATURE_VALUE_##feature()
+              |                                                ^
+        <scratch space>:4:1: note: expanded from here
+            4 | FASTSIMD_FEATURE_VALUE_AVX512
+              | ^
+        1 error generated.
+        gmake[1]: *** [CMakeFiles/cmTC_df973.dir/build.make:82: CMakeFiles/cmTC_df973.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_df973/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_26b40/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_26b40.dir/build.make CMakeFiles/cmTC_26b40.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_26b40.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=NEON  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_26b40.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_26b40.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_26b40.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:15:16: error: static assertion failed: FASTSIMD_ARCH<ARM=AARCH64>
+           15 | static_assert( 0, "FASTSIMD_ARCH<" TO_LITERAL( FASTSIMD_ARCH_NAME() ) ">" );
+              |                ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:18:1: error: expected unqualified-id
+           18 | TO_LITERAL( FASTSIMD_ARCH<FASTSIMD_ARCH_NAME()> );
+              | ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:4:30: note: expanded from macro 'TO_LITERAL'
+            4 | #define TO_LITERAL( string ) TO_LITERAL_( string )
+              |                              ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:3:31: note: expanded from macro 'TO_LITERAL_'
+            3 | #define TO_LITERAL_( string ) #string
+              |                               ^
+        <scratch space>:6:1: note: expanded from here
+            6 | "FASTSIMD_ARCH<ARM=AARCH64>"
+              | ^
+        2 errors generated.
+        gmake[1]: *** [CMakeFiles/cmTC_26b40.dir/build.make:82: CMakeFiles/cmTC_26b40.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_26b40/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_29f5c/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_29f5c.dir/build.make CMakeFiles/cmTC_29f5c.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_29f5c.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=AARCH64  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_29f5c.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_29f5c.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_29f5c.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:15:16: error: static assertion failed: FASTSIMD_ARCH<ARM=AARCH64>
+           15 | static_assert( 0, "FASTSIMD_ARCH<" TO_LITERAL( FASTSIMD_ARCH_NAME() ) ">" );
+              |                ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:18:1: error: expected unqualified-id
+           18 | TO_LITERAL( FASTSIMD_ARCH<FASTSIMD_ARCH_NAME()> );
+              | ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:4:30: note: expanded from macro 'TO_LITERAL'
+            4 | #define TO_LITERAL( string ) TO_LITERAL_( string )
+              |                              ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:3:31: note: expanded from macro 'TO_LITERAL_'
+            3 | #define TO_LITERAL_( string ) #string
+              |                               ^
+        <scratch space>:6:1: note: expanded from here
+            6 | "FASTSIMD_ARCH<ARM=AARCH64>"
+              | ^
+        2 errors generated.
+        gmake[1]: *** [CMakeFiles/cmTC_29f5c.dir/build.make:82: CMakeFiles/cmTC_29f5c.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_29f5c/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_7d01c/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_7d01c.dir/build.make CMakeFiles/cmTC_7d01c.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_7d01c.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=WASM  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_7d01c.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_7d01c.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_7d01c.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:9:5: error: function-like macro 'FASTSIMD_FEATURE_VALUE_WASM' is not defined
+            9 | #if FASTSIMD_FEATURE_VALUE( TEST_FEATURE_SET_ACTIVE ) > 0
+              |     ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:91:43: note: expanded from macro 'FASTSIMD_FEATURE_VALUE'
+           91 | #define FASTSIMD_FEATURE_VALUE( feature ) FASTSIMD_FEATURE_VALUE_IMPL( feature )
+              |                                           ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:92:48: note: expanded from macro 'FASTSIMD_FEATURE_VALUE_IMPL'
+           92 | #define FASTSIMD_FEATURE_VALUE_IMPL( feature ) FASTSIMD_FEATURE_VALUE_##feature()
+              |                                                ^
+        <scratch space>:4:1: note: expanded from here
+            4 | FASTSIMD_FEATURE_VALUE_WASM
+              | ^
+        1 error generated.
+        gmake[1]: *** [CMakeFiles/cmTC_7d01c.dir/build.make:82: CMakeFiles/cmTC_7d01c.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_7d01c/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/cmake/ArchDetect.cmake:15 (try_compile)"
+      - "build/_deps/fastsimd-src/CMakeLists.txt:22 (target_architecture)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_47cbb/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_47cbb.dir/build.make CMakeFiles/cmTC_47cbb.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_47cbb.dir/ArchDetect.cpp.o
+        /usr/bin/c++   -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_47cbb.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_47cbb.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_47cbb.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:15:16: error: static assertion failed: FASTSIMD_ARCH<ARM=AARCH64>
+           15 | static_assert( 0, "FASTSIMD_ARCH<" TO_LITERAL( FASTSIMD_ARCH_NAME() ) ">" );
+              |                ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:18:1: error: expected unqualified-id
+           18 | TO_LITERAL( FASTSIMD_ARCH<FASTSIMD_ARCH_NAME()> );
+              | ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:4:30: note: expanded from macro 'TO_LITERAL'
+            4 | #define TO_LITERAL( string ) TO_LITERAL_( string )
+              |                              ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:3:31: note: expanded from macro 'TO_LITERAL_'
+            3 | #define TO_LITERAL_( string ) #string
+              |                               ^
+        <scratch space>:5:1: note: expanded from here
+            5 | "FASTSIMD_ARCH<ARM=AARCH64>"
+              | ^
+        2 errors generated.
+        gmake[1]: *** [CMakeFiles/cmTC_47cbb.dir/build.make:82: CMakeFiles/cmTC_47cbb.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_47cbb/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_b95d5/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_b95d5.dir/build.make CMakeFiles/cmTC_b95d5.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_b95d5.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=SSE2  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_b95d5.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_b95d5.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_b95d5.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:9:5: error: function-like macro 'FASTSIMD_FEATURE_VALUE_SSE2' is not defined
+            9 | #if FASTSIMD_FEATURE_VALUE( TEST_FEATURE_SET_ACTIVE ) > 0
+              |     ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:91:43: note: expanded from macro 'FASTSIMD_FEATURE_VALUE'
+           91 | #define FASTSIMD_FEATURE_VALUE( feature ) FASTSIMD_FEATURE_VALUE_IMPL( feature )
+              |                                           ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:92:48: note: expanded from macro 'FASTSIMD_FEATURE_VALUE_IMPL'
+           92 | #define FASTSIMD_FEATURE_VALUE_IMPL( feature ) FASTSIMD_FEATURE_VALUE_##feature()
+              |                                                ^
+        <scratch space>:4:1: note: expanded from here
+            4 | FASTSIMD_FEATURE_VALUE_SSE2
+              | ^
+        1 error generated.
+        gmake[1]: *** [CMakeFiles/cmTC_b95d5.dir/build.make:82: CMakeFiles/cmTC_b95d5.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_b95d5/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_61620/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_61620.dir/build.make CMakeFiles/cmTC_61620.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_61620.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=SSE41  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_61620.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_61620.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_61620.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:9:5: error: function-like macro 'FASTSIMD_FEATURE_VALUE_SSE41' is not defined
+            9 | #if FASTSIMD_FEATURE_VALUE( TEST_FEATURE_SET_ACTIVE ) > 0
+              |     ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:91:43: note: expanded from macro 'FASTSIMD_FEATURE_VALUE'
+           91 | #define FASTSIMD_FEATURE_VALUE( feature ) FASTSIMD_FEATURE_VALUE_IMPL( feature )
+              |                                           ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:92:48: note: expanded from macro 'FASTSIMD_FEATURE_VALUE_IMPL'
+           92 | #define FASTSIMD_FEATURE_VALUE_IMPL( feature ) FASTSIMD_FEATURE_VALUE_##feature()
+              |                                                ^
+        <scratch space>:4:1: note: expanded from here
+            4 | FASTSIMD_FEATURE_VALUE_SSE41
+              | ^
+        1 error generated.
+        gmake[1]: *** [CMakeFiles/cmTC_61620.dir/build.make:82: CMakeFiles/cmTC_61620.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_61620/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_f9aad/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_f9aad.dir/build.make CMakeFiles/cmTC_f9aad.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_f9aad.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=AVX2  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_f9aad.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_f9aad.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_f9aad.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:9:5: error: function-like macro 'FASTSIMD_FEATURE_VALUE_AVX2' is not defined
+            9 | #if FASTSIMD_FEATURE_VALUE( TEST_FEATURE_SET_ACTIVE ) > 0
+              |     ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:91:43: note: expanded from macro 'FASTSIMD_FEATURE_VALUE'
+           91 | #define FASTSIMD_FEATURE_VALUE( feature ) FASTSIMD_FEATURE_VALUE_IMPL( feature )
+              |                                           ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:92:48: note: expanded from macro 'FASTSIMD_FEATURE_VALUE_IMPL'
+           92 | #define FASTSIMD_FEATURE_VALUE_IMPL( feature ) FASTSIMD_FEATURE_VALUE_##feature()
+              |                                                ^
+        <scratch space>:4:1: note: expanded from here
+            4 | FASTSIMD_FEATURE_VALUE_AVX2
+              | ^
+        1 error generated.
+        gmake[1]: *** [CMakeFiles/cmTC_f9aad.dir/build.make:82: CMakeFiles/cmTC_f9aad.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_f9aad/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_e67ac/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_e67ac.dir/build.make CMakeFiles/cmTC_e67ac.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_e67ac.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=AVX512  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_e67ac.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_e67ac.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_e67ac.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:9:5: error: function-like macro 'FASTSIMD_FEATURE_VALUE_AVX512' is not defined
+            9 | #if FASTSIMD_FEATURE_VALUE( TEST_FEATURE_SET_ACTIVE ) > 0
+              |     ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:91:43: note: expanded from macro 'FASTSIMD_FEATURE_VALUE'
+           91 | #define FASTSIMD_FEATURE_VALUE( feature ) FASTSIMD_FEATURE_VALUE_IMPL( feature )
+              |                                           ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:92:48: note: expanded from macro 'FASTSIMD_FEATURE_VALUE_IMPL'
+           92 | #define FASTSIMD_FEATURE_VALUE_IMPL( feature ) FASTSIMD_FEATURE_VALUE_##feature()
+              |                                                ^
+        <scratch space>:4:1: note: expanded from here
+            4 | FASTSIMD_FEATURE_VALUE_AVX512
+              | ^
+        1 error generated.
+        gmake[1]: *** [CMakeFiles/cmTC_e67ac.dir/build.make:82: CMakeFiles/cmTC_e67ac.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_e67ac/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_d3c03/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_d3c03.dir/build.make CMakeFiles/cmTC_d3c03.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_d3c03.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=NEON  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_d3c03.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_d3c03.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_d3c03.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:15:16: error: static assertion failed: FASTSIMD_ARCH<ARM=AARCH64>
+           15 | static_assert( 0, "FASTSIMD_ARCH<" TO_LITERAL( FASTSIMD_ARCH_NAME() ) ">" );
+              |                ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:18:1: error: expected unqualified-id
+           18 | TO_LITERAL( FASTSIMD_ARCH<FASTSIMD_ARCH_NAME()> );
+              | ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:4:30: note: expanded from macro 'TO_LITERAL'
+            4 | #define TO_LITERAL( string ) TO_LITERAL_( string )
+              |                              ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:3:31: note: expanded from macro 'TO_LITERAL_'
+            3 | #define TO_LITERAL_( string ) #string
+              |                               ^
+        <scratch space>:6:1: note: expanded from here
+            6 | "FASTSIMD_ARCH<ARM=AARCH64>"
+              | ^
+        2 errors generated.
+        gmake[1]: *** [CMakeFiles/cmTC_d3c03.dir/build.make:82: CMakeFiles/cmTC_d3c03.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_d3c03/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_fb685/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_fb685.dir/build.make CMakeFiles/cmTC_fb685.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_fb685.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=AARCH64  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_fb685.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_fb685.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_fb685.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:15:16: error: static assertion failed: FASTSIMD_ARCH<ARM=AARCH64>
+           15 | static_assert( 0, "FASTSIMD_ARCH<" TO_LITERAL( FASTSIMD_ARCH_NAME() ) ">" );
+              |                ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:18:1: error: expected unqualified-id
+           18 | TO_LITERAL( FASTSIMD_ARCH<FASTSIMD_ARCH_NAME()> );
+              | ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:4:30: note: expanded from macro 'TO_LITERAL'
+            4 | #define TO_LITERAL( string ) TO_LITERAL_( string )
+              |                              ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:3:31: note: expanded from macro 'TO_LITERAL_'
+            3 | #define TO_LITERAL_( string ) #string
+              |                               ^
+        <scratch space>:6:1: note: expanded from here
+            6 | "FASTSIMD_ARCH<ARM=AARCH64>"
+              | ^
+        2 errors generated.
+        gmake[1]: *** [CMakeFiles/cmTC_fb685.dir/build.make:82: CMakeFiles/cmTC_fb685.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_fb685/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/fastsimd-src/dispatch/cmake/ClassSIMD.cmake:145 (try_compile)"
+      - "external/FastNoise2/src/CMakeLists.txt:69 (fastsimd_create_dispatch_library)"
+    directories:
+      source: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+      binary: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/tyler/Programming/ProceduralTerrainGenerator/build/CPM_modules;"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_25125/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_25125.dir/build.make CMakeFiles/cmTC_25125.dir/build
+        gmake[1]: Entering directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_25125.dir/ArchDetect.cpp.o
+        /usr/bin/c++ -DTEST_FEATURE_SET_ACTIVE=WASM  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_25125.dir/ArchDetect.cpp.o -MF CMakeFiles/cmTC_25125.dir/ArchDetect.cpp.o.d -o CMakeFiles/cmTC_25125.dir/ArchDetect.cpp.o -c /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/ArchDetect.cpp:9:5: error: function-like macro 'FASTSIMD_FEATURE_VALUE_WASM' is not defined
+            9 | #if FASTSIMD_FEATURE_VALUE( TEST_FEATURE_SET_ACTIVE ) > 0
+              |     ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:91:43: note: expanded from macro 'FASTSIMD_FEATURE_VALUE'
+           91 | #define FASTSIMD_FEATURE_VALUE( feature ) FASTSIMD_FEATURE_VALUE_IMPL( feature )
+              |                                           ^
+        /Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-src/cmake/../include/FastSIMD/Utility/ArchDetect.h:92:48: note: expanded from macro 'FASTSIMD_FEATURE_VALUE_IMPL'
+           92 | #define FASTSIMD_FEATURE_VALUE_IMPL( feature ) FASTSIMD_FEATURE_VALUE_##feature()
+              |                                                ^
+        <scratch space>:4:1: note: expanded from here
+            4 | FASTSIMD_FEATURE_VALUE_WASM
+              | ^
+        1 error generated.
+        gmake[1]: *** [CMakeFiles/cmTC_25125.dir/build.make:82: CMakeFiles/cmTC_25125.dir/ArchDetect.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tyler/Programming/ProceduralTerrainGenerator/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_25125/fast] Error 2
+        
+      exitCode: 2
+...

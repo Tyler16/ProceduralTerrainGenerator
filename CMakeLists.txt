@@ -11,6 +11,8 @@ find_package(glm REQUIRED)
 
 include_directories(include)
 
+add_subdirectory(external/FastNoise2)
+
 add_executable(ProceduralTerrainGenerator
     src/main.cpp
     src/Shader.cpp
@@ -24,14 +26,21 @@ add_executable(ProceduralTerrainGenerator
     src/glad.c
 )
 
-target_link_libraries(ProceduralTerrainGenerator glfw)
-target_link_libraries(ProceduralTerrainGenerator glm::glm)
+target_link_libraries(ProceduralTerrainGenerator PRIVATE 
+    glfw
+    glm::glm
+    FastNoise
+)
+
+target_include_directories(ProceduralTerrainGenerator PRIVATE external/FastNoise2/include)
 
 if(APPLE)
-    target_link_libraries(ProceduralTerrainGenerator "-framework OpenGL")
-    target_link_libraries(ProceduralTerrainGenerator "-framework Cocoa")
-    target_link_libraries(ProceduralTerrainGenerator "-framework IOKit")
-    target_link_libraries(ProceduralTerrainGenerator "-framework CoreVideo")
+    target_link_libraries(ProceduralTerrainGenerator PRIVATE
+        "-framework OpenGL"
+        "-framework Cocoa"
+        "-framework IOKit"
+        "-framework CoreVideo"
+    )
 endif()
 
 set(SHADER_FILES
