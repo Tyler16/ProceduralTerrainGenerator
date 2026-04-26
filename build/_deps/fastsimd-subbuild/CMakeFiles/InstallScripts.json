@@ -1,7 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/Users/tyler/Programming/ProceduralTerrainGenerator/build/_deps/fastsimd-subbuild/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
