@@ -10,6 +10,7 @@ set(CMAKE_CONFIGURATION_TYPES "Release" CACHE STRING "" FORCE)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 list(APPEND CMAKE_PREFIX_PATH "/opt/homebrew")
 
@@ -30,10 +31,6 @@ set_target_properties(FastNoise PROPERTIES
 
 # FORCE the output name so it doesn't try to add a 'D'
 set_target_properties(FastNoise PROPERTIES DEBUG_POSTFIX "")
-
-if(CMAKE_BUILD_TYPE STREQUAL "Release")
-    set_target_properties(FastNoise PROPERTIES MAP_IMPORTED_CONFIG_DEBUG Release)
-endif()
 
 add_executable(ProceduralTerrainGenerator
     src/main.cpp
