@@ -28,7 +28,7 @@ std::pair<int, int> Chunk::getPos() {
 }
 
 float Chunk::getHeight(float global_x, float global_z) {
-    return height_generator_.getHeight(global_x, global_z);
+    return global_x;
 }
 
 float Chunk::localToGlobal(int local, int offset) {
@@ -41,16 +41,13 @@ int Chunk::localToIdx(int local_x, int local_z) {
 }
 
 std::vector<float> Chunk::generateHeightMap() {
-    std::vector<float> height_map;
+    std::vector<float> height_map(Constants::Chunks::HEIGHT_MAP_VERTS);
+    
 
-    for (int local_z = 0; local_z <= Constants::Chunks::PADDED_RESOLUTION; ++local_z) {
-        for (int local_x = 0; local_x <= Constants::Chunks::PADDED_RESOLUTION; ++local_x) {
-            float global_x = localToGlobal(local_x - 1, x_offset_);
-            float global_z = localToGlobal(local_z - 1, z_offset_);
-            float global_y = getHeight(global_x, global_z);
-            height_map.push_back(global_y);
-        }
-    }
+    height_generator_.getHeightMap(height_map.data(),
+                                   x_offset_,
+                                   z_offset_,
+                                   Constants::Chunks::HEIGHT_MAP_SIDE_VERTS);
 
     return height_map;
 }
@@ -99,7 +96,6 @@ void Chunk::setBufferData(BufferSet buffer_set) {
                     vertices_.data());
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     vertices_.clear();
-    vertices_.shrink_to_fit();
     ready_ = true;
 }
 

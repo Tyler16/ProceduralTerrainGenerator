@@ -1,21 +1,33 @@
 #include "HeightGenerator.h"
-#include "FastNoiseLite.h"
+#include "GlobalConstants.h"
+
+#include <FastNoise/FastNoise.h>
 
 HeightGenerator::HeightGenerator(int seed, float max_height) : 
     seed_(seed), max_height_(max_height) {
-    noiseGenerator_.SetSeed(seed_);
-    noiseGenerator_.SetNoiseType(FastNoiseLite::NoiseType_OpenSimplex2);
 
-    noiseGenerator_.SetFractalType(FastNoiseLite::FractalType_FBm);
-    noiseGenerator_.SetFractalOctaves(5);
-    noiseGenerator_.SetFractalLacunarity(2.0f); 
-    noiseGenerator_.SetFractalGain(0.5f);
+    auto simplex = FastNoise::New<FastNoise::Simplex>();
+    
+    auto fbm = FastNoise::New<FastNoise::FractalFBm>();
+    fbm->SetSource(simplex);
+    fbm->SetOctaveCount(5);
+    fbm->SetLacunarity(2.0f);
+    fbm->SetGain(0.5f);
+
+    noise_generator_ = fbm;
 }
 
-float HeightGenerator::getHeight(float world_x, float world_z) {
-    float noise_value = noiseGenerator_.GetNoise(world_x * FREQUENCY,
-                                                world_z * FREQUENCY);
-    float normalized_height = (noise_value + 1.0f) / 2.0f;
-    return normalized_height * max_height_;
-    //return noiseValue * max_height_;
+void HeightGenerator::getHeightMap(float* buffer, int chunk_x, int chunk_z, int size) {
+    float start_x = (static_cast<float>(chunk_x) * FREQUENCY * static_cast<float>(Constants::Chunks::RESOLUTION) - 1.0f);
+    float start_z = (static_cast<float>(chunk_z) * FREQUENCY * static_cast<float>(Constants::Chunks::RESOLUTION) - 1.0f);
+
+    noise_generator_->GenUniformGrid2D(buffer,
+                                       start_x, start_z,
+                                       size, size,
+                                       FREQUENCY, FREQUENCY, seed_);
+
+    for (int i = 0; i < size * size; ++i) {
+        float normalized = (buffer[i] + 1.0f) * 0.5f;
+        buffer[i] = normalized * max_height_;
+    }
 }
