@@ -1,16 +1,17 @@
 #include "ChunkManager.h"
 
-#include "BufferPool.h"
+#include "ChunkPool.h"
 #include "GlobalConstants.h"
 #include "ThreadPool.h"
+
 #include <cstdlib>
 #include <memory>
 
 ChunkManager::ChunkManager(int seed) :
-  thread_pool_(NUM_THREADS),
-  buffer_pool_(NUM_BUFFERS),
-  height_generator_(seed, MAX_HEIGHT),
-  last_cleanup_time_(0.0) {}
+    thread_pool_(NUM_THREADS),
+    height_generator_(seed, MAX_HEIGHT),
+    chunk_pool_(NUM_POOL_CHUNKS, height_generator_),
+    last_cleanup_time_(0.0) {}
 
 uint64_t ChunkManager::chunkPosToKey(int chunk_x, int chunk_z) {
     return (static_cast<uint64_t>(chunk_x) << 32)
@@ -46,8 +47,11 @@ void ChunkManager::cleanup(int camera_x, int camera_z) {
         auto [chunk_x, chunk_z] = it->second->getPos();
 
         if (!chunkInBounds(camera_x, camera_z, chunk_x, chunk_z, CLEANUP_DIST)) {
-            if (it->second->isReady()) {
-                buffer_pool_.release(it->second->getBufferSet());
+            if (it->second->getStatus() == ChunkStatus::ACTIVE) {
+                chunk_pool_.returnChunk(std::move(it->second));
+            }
+            else {
+                it->second->setStatus(ChunkStatus::RETIRED);
             }
             it = active_chunks_.erase(it);
         }
@@ -60,20 +64,23 @@ void ChunkManager::cleanup(int camera_x, int camera_z) {
 void ChunkManager::checkFinishedChunks() {
     std::shared_ptr<Chunk> curr_chunk;
     int num_set = 0;
-    while (buffer_pool_.hasBuffer()
-           && num_set < SET_DATA_LIMIT
+    while (num_set < SET_DATA_LIMIT
            && (curr_chunk = thread_pool_.dequeue()) != nullptr) {
         auto [chunk_x, chunk_z] = curr_chunk->getPos();
         uint64_t key = chunkPosToKey(chunk_x, chunk_z);
 
         auto it = active_chunks_.find(key);
-        if (it == active_chunks_.end() || it->second != curr_chunk) {
+
+        bool is_stale = (it == active_chunks_.end()) ||
+                        (it->second != curr_chunk) ||
+                        (curr_chunk->getStatus() == ChunkStatus::RETIRED);
+
+        if (is_stale) {
+            chunk_pool_.returnChunk(std::move(curr_chunk));
             continue;
-        }
+        } 
 
-        BufferSet buffers = buffer_pool_.acquire();
-
-        curr_chunk->setBufferData(buffers);
+        curr_chunk->setBufferData();
         ++num_set;
     }
 }
@@ -90,7 +97,11 @@ void ChunkManager::createChunks(int camera_x, int camera_z) {
            
             auto [it, inserted] = active_chunks_.try_emplace(key);
             if (inserted) {
-                it->second = std::make_shared<Chunk>(height_generator_);
+                std::shared_ptr<Chunk> new_chunk = std::move(chunk_pool_.getChunk());
+                if (new_chunk == nullptr) {
+                    return;
+                }
+                it->second = std::move(new_chunk);
                 thread_pool_.enqueue(it->second, curr_x, curr_z);
             }
         }

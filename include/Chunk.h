@@ -8,25 +8,34 @@
 #include <utility>
 #include <vector>
 
+enum class ChunkStatus {
+    IDLE,
+    PENDING,
+    GENERATING,
+    ACTIVE,
+    RETIRED
+};
+
 class Chunk {
   public:
-    Chunk(HeightGenerator& height_generator);
+    Chunk(HeightGenerator& height_generator, BufferSet buffers);
 
     void draw();
     void setup(int chunk_x, int chunk_z);
-    void setBufferData(BufferSet buffer_set);
+    void setBufferData();
     BufferSet getBufferSet();
     std::pair<int, int> getPos();
-    bool isReady();
+    ChunkStatus getStatus();
+    void setStatus(ChunkStatus status);
 
   private:
     BufferSet buffer_set_;
+    HeightGenerator& height_generator_;
+    std::vector<Vertex> vertices_;
+    std::atomic<ChunkStatus> status_;
     int x_offset_;
     int z_offset_;
     int seed_;
-    bool ready_;
-    std::vector<Vertex> vertices_;
-    HeightGenerator& height_generator_;
 
     float getHeight(float global_x, float global_z);
     float localToGlobal(int local, int offset);

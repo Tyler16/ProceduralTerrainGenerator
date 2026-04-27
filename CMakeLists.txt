@@ -34,14 +34,14 @@ set_target_properties(FastNoise PROPERTIES DEBUG_POSTFIX "")
 
 add_executable(ProceduralTerrainGenerator
     src/main.cpp
-    src/Shader.cpp
-    src/ShaderProgram.cpp
     src/Camera.cpp
     src/Chunk.cpp
     src/ChunkManager.cpp
+    src/ChunkPool.cpp
     src/HeightGenerator.cpp
+    src/Shader.cpp
+    src/ShaderProgram.cpp
     src/ThreadPool.cpp
-    src/BufferPool.cpp
     src/glad.c
 )
 

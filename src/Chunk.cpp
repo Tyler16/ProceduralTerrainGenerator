@@ -1,6 +1,7 @@
 #include "Chunk.h"
 #include "GlobalConstants.h"
 #include "HeightGenerator.h"
+#include "RenderingStructs.h"
 
 #include <glad/glad.h>
 #include <glm/glm.hpp>
@@ -8,11 +9,17 @@
 #include <utility>
 #include <vector>
 
-Chunk::Chunk(HeightGenerator& height_generator) :
-    height_generator_(height_generator), ready_(false) {}
+Chunk::Chunk(HeightGenerator& height_generator, BufferSet buffers) :
+    height_generator_(height_generator),
+    buffer_set_(buffers),
+    status_(ChunkStatus::IDLE) {}
 
-bool Chunk::isReady() {
-    return ready_;
+ChunkStatus Chunk::getStatus() {
+    return status_;
+}
+
+void Chunk::setStatus(ChunkStatus status) {
+    status_ = status;
 }
 
 BufferSet Chunk::getBufferSet() {
@@ -21,10 +28,6 @@ BufferSet Chunk::getBufferSet() {
 
 std::pair<int, int> Chunk::getPos() {
     return {x_offset_, z_offset_};
-}
-
-float Chunk::getHeight(float global_x, float global_z) {
-    return global_x;
 }
 
 float Chunk::localToGlobal(int local, int offset) {
@@ -61,6 +64,10 @@ glm::vec3 Chunk::calculateNormal(int local_x, int local_z,
 }
 
 void Chunk::generateVertices() {
+    if (status_ == ChunkStatus::RETIRED) {
+        return;
+    }
+    status_ = ChunkStatus::GENERATING;
     std::vector<float> height_map = generateHeightMap();
     
     for (int local_z = 1; local_z <= Constants::Chunks::PADDED_RESOLUTION - 1; ++local_z) {
@@ -82,9 +89,7 @@ void Chunk::generateVertices() {
     }
 }
 
-void Chunk::setBufferData(BufferSet buffer_set) {
-    
-    buffer_set_ = buffer_set;
+void Chunk::setBufferData() {
     glBindBuffer(GL_ARRAY_BUFFER, buffer_set_.vbo);
     glBufferSubData(GL_ARRAY_BUFFER,
                     0,
@@ -92,11 +97,11 @@ void Chunk::setBufferData(BufferSet buffer_set) {
                     vertices_.data());
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     vertices_.clear();
-    ready_ = true;
+    status_ = ChunkStatus::ACTIVE;
 }
 
 void Chunk::draw() {
-    if (!ready_) {
+    if (status_ != ChunkStatus::ACTIVE) {
         return;
     }
     glBindVertexArray(buffer_set_.vao);
