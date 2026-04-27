@@ -19,6 +19,7 @@ class ShaderProgram {
     void setMat3(const std::string& name, const glm::mat3& mat);
     void setMat4(const std::string& name, const glm::mat4& mat);
     void setFloat(const std::string& name, float value);
+    unsigned int getID();
     
   private:
     unsigned int program_id_;

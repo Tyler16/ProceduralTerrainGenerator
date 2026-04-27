@@ -10,6 +10,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 #include <string>
+#include <FastNoise/FastNoise.h>
 
 constexpr float CAMERA_INITIAL_YAW = -90.0f;
 constexpr float CAMERA_INITIAL_PITCH = 0.0f;
@@ -19,8 +20,8 @@ float last_x = 400, last_y = 300;
 bool first_mouse = true;
 float delta_time = 0.0f, last_frame = 0.0f;
 
-constexpr int WINDOW_WIDTH = 800;
-constexpr int WINDOW_HEIGHT = 600;
+constexpr int WINDOW_WIDTH = 1800;
+constexpr int WINDOW_HEIGHT = 720;
 
 void mouseCallback(GLFWwindow* window, double x_pos_in, double y_pos_in) {
     float x_pos = static_cast<float>(x_pos_in);
@@ -93,18 +94,17 @@ int main() {
     ChunkManager chunk_manager = ChunkManager(67);
 
     while (!glfwWindowShouldClose(window)) {
-        float current_frame = glfwGetTime();
+        float current_frame = (float) glfwGetTime();
         delta_time = current_frame - last_frame;
         last_frame = current_frame;
 
         processKeyboard(window);
         chunk_manager.update(camera->getPosition(), current_frame);
 
-        glClearColor(0.5f, 0.6f, 0.7f, 1.0f);
+        glClearColor(0.4f, 0.75f, 1.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         shader_program.use();
-
         glm::mat4 projection = glm::perspective(glm::radians(45.0f), (float) WINDOW_WIDTH / (float) WINDOW_HEIGHT, 0.1f, 1000.0f);
         glm::mat4 view = camera->getViewMatrix();
         glm::mat4 model = glm::mat4(1.0f);
@@ -119,10 +119,12 @@ int main() {
         shader_program.setVec3("lightPos", light_pos);
         shader_program.setVec3("lightColor", light_color);
         shader_program.setVec3("viewPos", camera->getPosition());
-        shader_program.setVec3("objectColor", glm::vec3(0.2f, 0.5f, 0.2f));
-        shader_program.setVec3("fogColor", glm::vec3(0.5, 0.6, 0.7));
-        shader_program.setFloat("fogMinDist", 450.0f);
-        shader_program.setFloat("fogMaxDist", 720.0f);
+        //shader_program.setVec3("objectColor", glm::vec3(0.45f, 0.6f, 0.3f));
+        shader_program.setVec3("fogColor", glm::vec3(0.4, 0.75, 1.0));
+        shader_program.setFloat("fogMinDist", 350.0f);
+        shader_program.setFloat("fogMaxDist", 480.0f);
+        shader_program.setFloat("uTime", current_frame);
+
 
         glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
         chunk_manager.render();

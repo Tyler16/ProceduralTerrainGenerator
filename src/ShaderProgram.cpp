@@ -27,6 +27,10 @@ void ShaderProgram::build() {
     }
 }
 
+unsigned int ShaderProgram::getID() {
+    return program_id_;
+}
+
 void ShaderProgram::use() {
     glUseProgram(program_id_);
 }
