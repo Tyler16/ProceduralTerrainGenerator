@@ -11,7 +11,9 @@ ChunkManager::ChunkManager(int seed) :
     thread_pool_(NUM_THREADS),
     height_generator_(seed, MAX_HEIGHT),
     chunk_pool_(NUM_POOL_CHUNKS, height_generator_),
-    last_cleanup_time_(0.0) {}
+    last_cleanup_time_(0.0),
+    last_cam_x_(200),
+    last_cam_z_(200) {}
 
 uint64_t ChunkManager::chunkPosToKey(int chunk_x, int chunk_z) {
     return (static_cast<uint64_t>(chunk_x) << 32)
@@ -111,13 +113,19 @@ void ChunkManager::createChunks(int camera_x, int camera_z) {
 void ChunkManager::update(glm::vec3 camera_pos, double curr_time) {
     auto [camera_x, camera_z] = posToChunkPos(camera_pos); 
 
-    createChunks(camera_x, camera_z);
     checkFinishedChunks();
+
+    /*if (last_cam_x_ ==  camera_x && last_cam_z_ == camera_z) {
+        return;
+    }*/
+    createChunks(camera_x, camera_z);
     
     if (curr_time - last_cleanup_time_ > CLEANUP_INTERVAL) {
         cleanup(camera_x, camera_z);
         last_cleanup_time_ = curr_time;
     }
+    last_cam_x_ = camera_x;
+    last_cam_z_ = camera_z;
 }
 
 void ChunkManager::render() {

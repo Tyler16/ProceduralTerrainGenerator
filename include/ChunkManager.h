@@ -18,10 +18,9 @@ class ChunkManager {
     void update(glm::vec3 camera_pos, double curr_time);
 
   private:
-    static constexpr int RENDER_DIST = 5;
-    static constexpr int CLEANUP_DIST = 6;
-    static constexpr size_t NUM_BUFFERS = 100;
-    static constexpr size_t NUM_POOL_CHUNKS = 200;
+    static constexpr int RENDER_DIST = 12;
+    static constexpr int CLEANUP_DIST = 13;
+    static constexpr size_t NUM_POOL_CHUNKS = 1200;
     size_t NUM_THREADS = std::thread::hardware_concurrency() - 1;
     static constexpr float MAX_HEIGHT = 100.0f;
     static constexpr double CLEANUP_INTERVAL = 1.0f;
@@ -31,6 +30,8 @@ class ChunkManager {
     ThreadPool thread_pool_;
     ChunkPool chunk_pool_;
     HeightGenerator height_generator_;
+    int last_cam_x_;
+    int last_cam_z_;
     double last_cleanup_time_;
 
     uint64_t chunkPosToKey(int chunk_x, int chunk_z);

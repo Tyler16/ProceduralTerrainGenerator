@@ -10,8 +10,12 @@ uniform vec3 viewPos;
 uniform vec3 lightColor;
 uniform vec3 objectColor;
 
-void main() {
+uniform vec3 fogColor;
+uniform float fogMinDist;
+uniform float fogMaxDist;
 
+void main() {
+    // Basic lighting
     float ambientStrength = 0.2f;
     vec3 ambient = ambientStrength * lightColor;
 
@@ -26,7 +30,15 @@ void main() {
     float spec = pow(max(dot(viewDir, reflectDir), 0.0f), 32);
     vec3 specular = specularStrength * spec * lightColor;
 
-    vec3 result = (ambient + diffuse + specular) * objectColor;
-    FragColor = vec4(result, 1.0f);
+    vec3 litResult = (ambient + diffuse + specular) * objectColor;
+
+    // Fog
+    float dist = length(viewPos - FragPos);
+    float fogFactor = (fogMaxDist - dist) / (fogMaxDist - fogMinDist);
+    fogFactor = clamp(fogFactor, 0.0, 1.0);
+
+    vec3 finalColor = mix(fogColor, litResult, fogFactor);
+    
+    FragColor = vec4(finalColor, 1.0f);
 }
 

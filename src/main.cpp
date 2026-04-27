@@ -100,7 +100,7 @@ int main() {
         processKeyboard(window);
         chunk_manager.update(camera->getPosition(), current_frame);
 
-        glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+        glClearColor(0.5f, 0.6f, 0.7f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         shader_program.use();
@@ -120,6 +120,9 @@ int main() {
         shader_program.setVec3("lightColor", light_color);
         shader_program.setVec3("viewPos", camera->getPosition());
         shader_program.setVec3("objectColor", glm::vec3(0.2f, 0.5f, 0.2f));
+        shader_program.setVec3("fogColor", glm::vec3(0.5, 0.6, 0.7));
+        shader_program.setFloat("fogMinDist", 450.0f);
+        shader_program.setFloat("fogMaxDist", 720.0f);
 
         glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
         chunk_manager.render();
