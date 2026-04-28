@@ -22,13 +22,22 @@ class Camera {
         return glm::normalize(glm::cross(front_, up_));
     }
 
+    Camera() = default;
+
   public:
-    Camera(glm::vec3 position,
-           glm::vec3 front,
-           glm::vec3 up,
-           float yaw,
-           float pitch)
-        : position_(position), front_(front), up_(up), yaw_(yaw), pitch_(pitch) {}
+    Camera(const Camera&) = delete;
+    void operator=(const Camera&) = delete;
+
+    static Camera& getInstance() {
+        static Camera instance;
+        return instance;
+    }
+
+    void init(glm::vec3 position,
+              glm::vec3 front,
+              glm::vec3 up,
+              float yaw,
+              float pitch);
 
     glm::mat4 getViewMatrix();
 

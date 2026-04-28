@@ -13,7 +13,25 @@
 Chunk::Chunk(HeightGenerator& height_generator, BufferSet buffers) :
     height_generator_(height_generator),
     buffer_set_(buffers),
-    status_(ChunkStatus::IDLE) {}
+    status_(ChunkStatus::IDLE) {
+    vertices_.resize(Constants::Chunks::NUM_VERTS);
+
+    for (int z = 0; z < Constants::Chunks::VERTS_PER_SIDE; ++z) {
+        for (int x = 0; x < Constants::Chunks::VERTS_PER_SIDE; ++x) {
+            int idx = meshIdx(x, z);
+            
+            vertices_[idx].position = glm::vec3(localToGlobal(x),
+                                                0.0f,
+                                                localToGlobal(z));
+            
+            // TexCoords should stay 0.0 -> 1.0
+            vertices_[idx].tex_coords = {
+                (float)x / Constants::Chunks::RESOLUTION,
+                (float)z / Constants::Chunks::RESOLUTION
+            };
+        }
+    }
+}
 
 ChunkStatus Chunk::getStatus() {
     return status_;
@@ -31,13 +49,17 @@ std::pair<int, int> Chunk::getPos() {
     return {x_offset_, z_offset_};
 }
 
-float Chunk::localToGlobal(int local, int offset) {
+float Chunk::localToGlobal(int local) {
     return Constants::Chunks::CHUNK_SIZE *
-                (((float)local / Constants::Chunks::RESOLUTION) + offset);
+                ((float)local / Constants::Chunks::RESOLUTION);
 }
 
-int Chunk::localToIdx(int local_x, int local_z) {
-    return local_z * (Constants::Chunks::PADDED_RESOLUTION + 1) + local_x;
+int Chunk::heightMapIdx(int local_x, int local_z) {
+    return local_z * Constants::Chunks::HEIGHT_MAP_SIDE_VERTS + local_x;
+}
+
+int Chunk::meshIdx(int local_x, int local_z) {
+    return local_z * Constants::Chunks::VERTS_PER_SIDE + local_x;
 }
 
 std::vector<float> Chunk::generateHeightMap() {
@@ -53,14 +75,14 @@ std::vector<float> Chunk::generateHeightMap() {
 }
 
 glm::vec3 Chunk::calculateNormal(int local_x, int local_z,
-                                 std::vector<float> height_map) {
-    float l_height = height_map[localToIdx(local_x - 1, local_z)];
-    float r_height = height_map[localToIdx(local_x + 1, local_z)];
-    float u_height = height_map[localToIdx(local_x, local_z + 1)];
-    float d_height = height_map[localToIdx(local_x, local_z - 1)];
+                                 std::vector<float>& height_map) {
+    float l_height = height_map[heightMapIdx(local_x - 1, local_z)];
+    float r_height = height_map[heightMapIdx(local_x + 1, local_z)];
+    float u_height = height_map[heightMapIdx(local_x, local_z + 1)];
+    float d_height = height_map[heightMapIdx(local_x, local_z - 1)];
 
     return glm::normalize(glm::vec3(l_height - r_height,
-                                    Constants::Chunks::VERTEX_DIST * 2,
+                                    Constants::Chunks::VERTEX_DIST * 2.0f,
                                     d_height - u_height));
 }
 
@@ -69,23 +91,16 @@ void Chunk::generateVertices() {
         return;
     }
     status_ = ChunkStatus::GENERATING;
+
     std::vector<float> height_map = generateHeightMap();
     
-    for (int local_z = 1; local_z <= Constants::Chunks::PADDED_RESOLUTION - 1; ++local_z) {
-        for (int local_x = 1; local_x <= Constants::Chunks::PADDED_RESOLUTION - 1; ++local_x) {
-            Vertex v;
+    for (int z = 0; z <= Constants::Chunks::VERTS_PER_SIDE; ++z) {
+        for (int x = 0; x < Constants::Chunks::VERTS_PER_SIDE; ++x) {
+            int mesh_idx = meshIdx(x, z);
+            int hmap_idx = heightMapIdx(x + 1, z + 1);
 
-            float height = height_map[localToIdx(local_x, local_z)];
-
-            v.position = glm::vec3(localToGlobal(local_x - 1, x_offset_),
-                                   height,
-                                   localToGlobal(local_z - 1, z_offset_));
-            v.normal = calculateNormal(local_x, local_z, height_map);
-            v.tex_coords = {
-                (float) (local_x - 1) / Constants::Chunks::RESOLUTION,
-                (float) (local_z - 1) / Constants::Chunks::RESOLUTION
-            };
-            vertices_.push_back(v);
+            vertices_[mesh_idx].position.y = height_map[hmap_idx];
+            vertices_[mesh_idx].normal = calculateNormal(x + 1, z + 1, height_map);
         }
     }
 }
@@ -97,14 +112,21 @@ void Chunk::setBufferData() {
                     vertices_.size() * sizeof(Vertex),
                     vertices_.data());
     glBindBuffer(GL_ARRAY_BUFFER, 0);
-    vertices_.clear();
     status_ = ChunkStatus::ACTIVE;
 }
 
-void Chunk::draw() {
+void Chunk::draw(ShaderProgram& shader) {
     if (status_ != ChunkStatus::ACTIVE) {
         return;
     }
+
+    glm::mat4 model = glm::mat4(1.0f);
+    glm::vec3 world_pos(x_offset_ * Constants::Chunks::CHUNK_SIZE,
+                        0.0f,
+                        z_offset_ * Constants::Chunks::CHUNK_SIZE);
+    model = glm::translate(model, world_pos);
+    shader.setMat4("model", model);
+
     glBindVertexArray(buffer_set_.vao);
     glDrawElements(GL_TRIANGLES, Constants::Chunks::NUM_TRIANGLES * 3,
                    GL_UNSIGNED_INT, 0);

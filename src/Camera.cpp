@@ -5,6 +5,18 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
+void Camera::init(glm::vec3 initial_position,
+                  glm::vec3 front,
+                  glm::vec3 up,
+                  float yaw,
+                  float pitch) {
+    position_ = initial_position;
+    front_ = front;
+    up_ = up;
+    yaw_ = yaw;
+    pitch_ = pitch;
+}
+
 glm::mat4 Camera::getViewMatrix() {
     return glm::lookAt(position_, position_ + front_, up_);
 }

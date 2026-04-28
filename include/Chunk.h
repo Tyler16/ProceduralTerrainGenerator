@@ -3,6 +3,7 @@
 
 #include "HeightGenerator.h"
 #include "RenderingStructs.h"
+#include "ShaderProgram.h"
 
 #include <glm/glm.hpp>
 
@@ -21,7 +22,7 @@ class Chunk {
   public:
     Chunk(HeightGenerator& height_generator, BufferSet buffers);
 
-    void draw();
+    void draw(ShaderProgram& shader);
     void setup(int chunk_x, int chunk_z);
     void setBufferData();
     BufferSet getBufferSet();
@@ -39,11 +40,12 @@ class Chunk {
     int seed_;
 
     float getHeight(float global_x, float global_z);
-    float localToGlobal(int local, int offset);
-    int localToIdx(int local_x, int local_z);
+    float localToGlobal(int local);
+    int heightMapIdx(int local_x, int local_z);
+    int meshIdx(int local_x, int local_z);
     std::vector<float> generateHeightMap();
     glm::vec3 calculateNormal(int local_x, int local_z,
-                              std::vector<float> height_map);
+                              std::vector<float>& height_map);
     void generateVertices();
 };
 

@@ -14,7 +14,6 @@
 
 constexpr float CAMERA_INITIAL_YAW = -90.0f;
 constexpr float CAMERA_INITIAL_PITCH = 0.0f;
-Camera* camera = nullptr;
 
 float last_x = 400, last_y = 300;
 bool first_mouse = true;
@@ -36,7 +35,7 @@ void mouseCallback(GLFWwindow* window, double x_pos_in, double y_pos_in) {
     last_x = x_pos;
     last_y = y_pos;
 
-    camera->processMouse(x_offset, y_offset);
+    Camera::getInstance().processMouse(x_offset, y_offset);
 }
 
 void processKeyboard(GLFWwindow* window) {
@@ -49,7 +48,7 @@ void processKeyboard(GLFWwindow* window) {
 
     for (int& input : movement_inputs) {
         if (glfwGetKey(window, input) == GLFW_PRESS)
-            camera->processKeyboard(input, delta_time);
+            Camera::getInstance().processKeyboard(input, delta_time);
     }
 }
 
@@ -76,11 +75,12 @@ int main() {
     const glm::vec3 CAMERA_INITIAL_POS = glm::vec3(0.0f, 100.0f, 0.0f);
     const glm::vec3 CAMERA_INITIAL_FRONT = glm::vec3(0.0f, 0.0f, -1.0f);
     const glm::vec3 CAMERA_INITIAL_UP = glm::vec3(0.0f, 1.0f, 0.0f);
-    camera = new Camera(CAMERA_INITIAL_POS,
-                       CAMERA_INITIAL_FRONT,
-                       CAMERA_INITIAL_UP,
-                       CAMERA_INITIAL_YAW,
-                       CAMERA_INITIAL_PITCH);
+    Camera& camera = Camera::getInstance();
+    camera.init(CAMERA_INITIAL_POS,
+                CAMERA_INITIAL_FRONT,
+                CAMERA_INITIAL_UP,
+                CAMERA_INITIAL_YAW,
+                CAMERA_INITIAL_PITCH);
 
 
     ShaderProgram chunk_shader = ShaderProgram("shaders/chunk.vert",
@@ -98,7 +98,7 @@ int main() {
         last_frame = current_frame;
 
         processKeyboard(window);
-        chunk_manager.update(camera->getPosition(), current_frame);
+        chunk_manager.update(camera.getPosition(), current_frame);
 
         glClearColor(Constants::Colors::FOG[0],
                      Constants::Colors::FOG[1],
@@ -106,10 +106,10 @@ int main() {
                      1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        glm::mat4 view = camera->getViewMatrix();
+        glm::mat4 view = camera.getViewMatrix();
         glm::mat4 sky_view = glm::mat4(glm::mat3(view)); 
         skybox.render(sky_view, current_frame);
-        chunk_manager.render(view, camera->getPosition(), current_frame);
+        chunk_manager.render(current_frame);
 
         glfwSwapBuffers(window);
         glfwPollEvents();
