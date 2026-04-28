@@ -20,8 +20,8 @@ const vec3 GLOW_COLOR   = vec3(0.9, 0.95, 0.70);
 
 // --- NEW ROCK PALETTE ---
 // Warm, painterly tones to match the Ghibli aesthetic
-const vec3 ROCK_DARK    = vec3(0.31, 0.31, 0.31); // Deep earthy shadow
-const vec3 ROCK_LIGHT   = vec3(0.45, 0.45, 0.45); // Sun-baked stone
+const vec3 ROCK_DARK    = vec3(0.35, 0.32, 0.35); // Deep earthy shadow
+const vec3 ROCK_LIGHT   = vec3(0.55, 0.52, 0.5); // Sun-baked stone
 
 // --- Core Noise ---
 float hash(vec2 p) { return fract(sin(dot(p, vec2(12.71, 31.17))) * 43758.5453123); }

@@ -1,4 +1,5 @@
 #include "HeightGenerator.h"
+
 #include "GlobalConstants.h"
 
 #include <FastNoise/FastNoise.h>

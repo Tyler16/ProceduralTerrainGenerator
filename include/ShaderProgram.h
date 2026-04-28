@@ -6,12 +6,15 @@
 #include <glad/glad.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/type_ptr.hpp>
-#include <vector>
+
 #include <string>
+#include <vector>
 
 class ShaderProgram {
   public:
     ShaderProgram();
+    ShaderProgram(const std::string& vertex_path,
+                  const std::string& fragment_path);
     void addShader(Shader& shader);
     void build();
     void use();

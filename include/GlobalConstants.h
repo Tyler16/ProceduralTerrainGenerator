@@ -1,6 +1,9 @@
 #ifndef GLOBAL_CONSTANTS_H
 #define GLOBAL_CONSTANTS_H
 
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+
 namespace Constants {
     namespace Chunks {
         inline constexpr unsigned int RESOLUTION = 64;
@@ -15,8 +18,17 @@ namespace Constants {
     }
 
     namespace Window {
-        inline constexpr int WIDTH = 800;
-        inline constexpr int HEIGHT = 600;
+        inline constexpr int WIDTH = 1440;
+        inline constexpr int HEIGHT = 900;
+    }
+
+    namespace Matrices {
+        const glm::mat4 PROJECTION = glm::perspective(glm::radians(45.0f), (float) Window::WIDTH / (float) Window::HEIGHT, 0.1f, 1000.0f);;
+        const glm::vec3 LIGHT_POS(1.2f, 0.5f, 2.0f);
+    }
+
+    namespace Colors {
+        const glm::vec3 FOG(0.7f, 0.9f, 1.0f);
     }
 }
 

@@ -5,8 +5,9 @@
 #include "RenderingStructs.h"
 
 #include <glm/glm.hpp>
-#include <utility>
+
 #include <vector>
+#include <utility>
 
 enum class ChunkStatus {
     IDLE,

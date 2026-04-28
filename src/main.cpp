@@ -1,16 +1,16 @@
 #include "Camera.h"
 #include "ChunkManager.h"
 #include "GlobalConstants.h"
-#include "Shader.h"
 #include "ShaderProgram.h"
+#include "Skybox.h"
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
+
 #include <string>
-#include <FastNoise/FastNoise.h>
 
 constexpr float CAMERA_INITIAL_YAW = -90.0f;
 constexpr float CAMERA_INITIAL_PITCH = 0.0f;
@@ -20,8 +20,6 @@ float last_x = 400, last_y = 300;
 bool first_mouse = true;
 float delta_time = 0.0f, last_frame = 0.0f;
 
-constexpr int WINDOW_WIDTH = 1800;
-constexpr int WINDOW_HEIGHT = 720;
 
 void mouseCallback(GLFWwindow* window, double x_pos_in, double y_pos_in) {
     float x_pos = static_cast<float>(x_pos_in);
@@ -84,14 +82,15 @@ int main() {
                        CAMERA_INITIAL_YAW,
                        CAMERA_INITIAL_PITCH);
 
-    Shader vertexShader = Shader(GL_VERTEX_SHADER, "shaders/vertex.glsl");
-    Shader fragmentShader = Shader(GL_FRAGMENT_SHADER, "shaders/fragment.glsl");
-    ShaderProgram shader_program = ShaderProgram();
-    shader_program.addShader(vertexShader);
-    shader_program.addShader(fragmentShader);
-    shader_program.build();
 
-    ChunkManager chunk_manager = ChunkManager(67);
+    ShaderProgram chunk_shader = ShaderProgram("shaders/chunk.vert",
+                                               "shaders/chunk.frag");
+ 
+    ShaderProgram skybox_shader = ShaderProgram("shaders/skybox.vert",
+                                                "shaders/skybox.frag");
+
+    Skybox skybox = Skybox(skybox_shader);
+    ChunkManager chunk_manager = ChunkManager(67, chunk_shader);
 
     while (!glfwWindowShouldClose(window)) {
         float current_frame = (float) glfwGetTime();
@@ -101,34 +100,16 @@ int main() {
         processKeyboard(window);
         chunk_manager.update(camera->getPosition(), current_frame);
 
-        glClearColor(0.4f, 0.75f, 1.0f, 1.0f);
+        glClearColor(Constants::Colors::FOG[0],
+                     Constants::Colors::FOG[1],
+                     Constants::Colors::FOG[2],
+                     1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        shader_program.use();
-        glm::mat4 projection = glm::perspective(glm::radians(45.0f), (float) WINDOW_WIDTH / (float) WINDOW_HEIGHT, 0.1f, 1000.0f);
         glm::mat4 view = camera->getViewMatrix();
-        glm::mat4 model = glm::mat4(1.0f);
-        glm::mat3 normalMatrix = glm::mat3(glm::transpose(glm::inverse(model)));
-        shader_program.setMat4("projection", projection);
-        shader_program.setMat4("view", view);
-        shader_program.setMat4("model", model);
-        shader_program.setMat3("normalMatrix", normalMatrix);
-
-        glm::vec3 light_pos(1.2f, 50.0f, 2.0f);
-        glm::vec3 light_color(1.0f, 1.0f, 0.9f);
-        shader_program.setVec3("lightPos", light_pos);
-        shader_program.setVec3("lightColor", light_color);
-        shader_program.setVec3("viewPos", camera->getPosition());
-        //shader_program.setVec3("objectColor", glm::vec3(0.45f, 0.6f, 0.3f));
-        shader_program.setVec3("fogColor", glm::vec3(0.4, 0.75, 1.0));
-        shader_program.setFloat("fogMinDist", 350.0f);
-        shader_program.setFloat("fogMaxDist", 480.0f);
-        shader_program.setFloat("uTime", current_frame);
-
-
-        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-        chunk_manager.render();
-        
+        glm::mat4 sky_view = glm::mat4(glm::mat3(view)); 
+        skybox.render(sky_view, current_frame);
+        chunk_manager.render(view, camera->getPosition(), current_frame);
 
         glfwSwapBuffers(window);
         glfwPollEvents();

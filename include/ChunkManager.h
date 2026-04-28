@@ -4,17 +4,19 @@
 #include "Chunk.h"
 #include "ChunkPool.h"
 #include "HeightGenerator.h"
+#include "ShaderProgram.h"
 #include "ThreadPool.h"
 
-#include <cstdint>
 #include <glm/glm.hpp>
+
+#include <cstdint>
 #include <unordered_map>
 
 class ChunkManager {
 
   public:
-    ChunkManager(int seed);
-    void render();
+    ChunkManager(int seed, ShaderProgram shader);
+    void render(glm::mat4 view, glm::vec3 camera_pos, float current_frame);
     void update(glm::vec3 camera_pos, double curr_time);
 
   private:
@@ -30,6 +32,7 @@ class ChunkManager {
     ThreadPool thread_pool_;
     ChunkPool chunk_pool_;
     HeightGenerator height_generator_;
+    ShaderProgram shader_;
     int last_cam_x_;
     int last_cam_z_;
     double last_cleanup_time_;

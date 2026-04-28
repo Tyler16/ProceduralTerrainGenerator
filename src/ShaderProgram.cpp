@@ -1,14 +1,26 @@
 #include "ShaderProgram.h"
 
 #include "Shader.h"
+
 #include <glad/glad.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/type_ptr.hpp>
-#include <vector>
+
 #include <string>
+#include <vector>
 
 ShaderProgram::ShaderProgram() {
    program_id_ = glCreateProgram(); 
+}
+
+ShaderProgram::ShaderProgram(const std::string& vertex_path,
+                             const std::string& fragment_path) {
+    program_id_ = glCreateProgram();
+    Shader vertex_shader = Shader(GL_VERTEX_SHADER, vertex_path);
+    Shader fragment_shader = Shader(GL_FRAGMENT_SHADER, fragment_path);
+    addShader(vertex_shader);
+    addShader(fragment_shader);
+    build();
 }
 
 void ShaderProgram::addShader(Shader& shader) {

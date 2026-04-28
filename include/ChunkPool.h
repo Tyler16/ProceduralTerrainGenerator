@@ -5,8 +5,9 @@
 #include "HeightGenerator.h"
 #include "RenderingStructs.h"
 
-#include <cstddef>
 #include <glad/glad.h>
+
+#include <cstddef>
 #include <memory>
 #include <vector>
 

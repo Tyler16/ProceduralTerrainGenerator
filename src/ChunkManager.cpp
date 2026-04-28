@@ -7,10 +7,11 @@
 #include <cstdlib>
 #include <memory>
 
-ChunkManager::ChunkManager(int seed) :
+ChunkManager::ChunkManager(int seed, ShaderProgram shader) :
     thread_pool_(NUM_THREADS),
     height_generator_(seed, MAX_HEIGHT),
     chunk_pool_(NUM_POOL_CHUNKS, height_generator_),
+    shader_(shader),
     last_cleanup_time_(0.0),
     last_cam_x_(200),
     last_cam_z_(200) {}
@@ -128,7 +129,25 @@ void ChunkManager::update(glm::vec3 camera_pos, double curr_time) {
     last_cam_z_ = camera_z;
 }
 
-void ChunkManager::render() {
+void ChunkManager::render(glm::mat4 view, glm::vec3 camera_pos, float current_frame) {
+    glm::mat4 model = glm::mat4(1.0f);
+    glm::mat3 normal_matrix = glm::mat3(glm::transpose(glm::inverse(model)));
+
+    shader_.use();
+    shader_.setMat4("projection", Constants::Matrices::PROJECTION);
+    shader_.setMat4("view", view);
+    shader_.setMat4("model", model);
+    shader_.setMat3("normalMatrix", normal_matrix);
+
+    shader_.setVec3("lightPos", Constants::Matrices::LIGHT_POS);
+    shader_.setVec3("viewPos", camera_pos);
+    shader_.setVec3("fogColor", Constants::Colors::FOG);
+    shader_.setFloat("fogMinDist", 350.0f);
+    shader_.setFloat("fogMaxDist", 480.0f);
+    shader_.setFloat("uTime", current_frame);
+
+    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+
     for (const auto& chunk_pair : active_chunks_) {
         chunk_pair.second->draw();
     }

@@ -33,7 +33,6 @@ set_target_properties(FastNoise PROPERTIES
 set_target_properties(FastNoise PROPERTIES DEBUG_POSTFIX "")
 
 add_executable(ProceduralTerrainGenerator
-    src/main.cpp
     src/Camera.cpp
     src/Chunk.cpp
     src/ChunkManager.cpp
@@ -41,8 +40,10 @@ add_executable(ProceduralTerrainGenerator
     src/HeightGenerator.cpp
     src/Shader.cpp
     src/ShaderProgram.cpp
+    src/Skybox.cpp
     src/ThreadPool.cpp
     src/glad.c
+    src/main.cpp
 )
 
 target_link_libraries(ProceduralTerrainGenerator PRIVATE 
@@ -63,8 +64,10 @@ if(APPLE)
 endif()
 
 set(SHADER_FILES
-    "${CMAKE_CURRENT_SOURCE_DIR}/shaders/vertex.glsl"
-    "${CMAKE_CURRENT_SOURCE_DIR}/shaders/fragment.glsl"
+    "${CMAKE_CURRENT_SOURCE_DIR}/shaders/chunk.frag"
+    "${CMAKE_CURRENT_SOURCE_DIR}/shaders/chunk.vert"
+    "${CMAKE_CURRENT_SOURCE_DIR}/shaders/skybox.frag"
+    "${CMAKE_CURRENT_SOURCE_DIR}/shaders/skybox.vert"
 )
 set(CMAKE_BUILD_TYPE Debug)
 

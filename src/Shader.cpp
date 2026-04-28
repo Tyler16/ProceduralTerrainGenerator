@@ -1,11 +1,11 @@
 #include "Shader.h"
 
 #include <glm/gtc/type_ptr.hpp>
-#include <fstream>
-#include <sstream>
-#include <iostream>
-#include <filesystem>
 
+#include <filesystem>
+#include <fstream>
+#include <iostream>
+#include <sstream>
 
 Shader::Shader(GLenum shader_type, const std::string& filepath) {
     std::string code = readCode(filepath);
