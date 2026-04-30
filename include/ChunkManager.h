@@ -19,12 +19,12 @@ class ChunkManager {
   public:
     ChunkManager(int seed, ShaderProgram shader);
     void render(float current_frame);
-    void update(glm::vec3 camera_pos, double curr_time);
+    void update(double curr_time);
 
   private:
-    static constexpr int RENDER_DIST = 14;
-    static constexpr int CLEANUP_DIST = 15;
-    static constexpr size_t NUM_POOL_CHUNKS = 1500;
+    static constexpr int RENDER_DIST = 16;
+    static constexpr int CLEANUP_DIST = 17;
+    static constexpr size_t NUM_POOL_CHUNKS = (2 * CLEANUP_DIST + 1) * (2 * CLEANUP_DIST + 1);
     size_t NUM_THREADS = std::thread::hardware_concurrency() - 1;
     static constexpr float MAX_HEIGHT = 100.0f;
     static constexpr double CLEANUP_INTERVAL = 1.0f;

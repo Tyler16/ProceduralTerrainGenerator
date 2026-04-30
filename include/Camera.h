@@ -12,11 +12,12 @@ class Camera {
     glm::vec3 up_;
     float yaw_;
     float pitch_;
+    glm::vec3 velocity_;
 
     static constexpr float SENSITIVITY = 0.1f;
     static constexpr float MAX_PITCH = 89.0f;
     static constexpr float MIN_PITCH = -89.0f;
-    static constexpr float BASE_SPEED = 20.0f;
+    static constexpr float BASE_SPEED = 40.0f;
 
     glm::vec3 getRight() {
         return glm::normalize(glm::cross(front_, up_));
@@ -42,6 +43,8 @@ class Camera {
     glm::mat4 getViewMatrix();
 
     glm::vec3 getPosition();
+
+    glm::vec3 getVelocity();
 
     void processMouse(float x_offset, float y_offset);
 

@@ -25,6 +25,10 @@ glm::vec3 Camera::getPosition() {
     return position_;
 }
 
+glm::vec3 Camera::getVelocity() {
+    return velocity_;
+}
+
 void Camera::processMouse(float x_offset, float y_offset) {
     yaw_ += x_offset * SENSITIVITY;
     pitch_ += y_offset * SENSITIVITY;
@@ -41,18 +45,18 @@ void Camera::processMouse(float x_offset, float y_offset) {
 }
 
 void Camera::processKeyboard(int direction, float delta_time) {
-
-    float displacement = BASE_SPEED * delta_time;
-    glm::vec3 direction_vector = front_;
+    velocity_ = front_;
 
     if (direction == GLFW_KEY_A || direction == GLFW_KEY_D) {
-        direction_vector = getRight();
+        velocity_ = getRight();
     }
 
     if (direction == GLFW_KEY_A || direction == GLFW_KEY_S) {
-        displacement *= -1.0f;
+        velocity_ *= -1.0f;
     }
-    position_ += displacement * direction_vector;
+
+    velocity_ *= BASE_SPEED;
+    position_ += velocity_ * delta_time;
 }
 
 

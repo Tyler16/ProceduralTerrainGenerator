@@ -114,14 +114,13 @@ void ChunkManager::createChunks(int camera_x, int camera_z) {
     }
 }
 
-void ChunkManager::update(glm::vec3 camera_pos, double curr_time) {
-    auto [camera_x, camera_z] = posToChunkPos(camera_.getPosition()); 
+void ChunkManager::update(double curr_time) {
+    glm::vec3 curr_pos = camera_.getPosition(); 
+    glm::vec3 velocity = camera_.getVelocity();
+    glm::vec3 predicted_pos = curr_pos + velocity * 2.0f;
+    auto [camera_x, camera_z] = posToChunkPos(predicted_pos);
 
-    checkFinishedChunks();
-
-    if (last_cam_x_ ==  camera_x && last_cam_z_ == camera_z) {
-        return;
-    }
+    checkFinishedChunks(); 
     createChunks(camera_x, camera_z);
     
     if (curr_time - last_cleanup_time_ > CLEANUP_INTERVAL) {

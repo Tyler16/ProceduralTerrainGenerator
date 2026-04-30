@@ -98,7 +98,7 @@ int main() {
         last_frame = current_frame;
 
         processKeyboard(window);
-        chunk_manager.update(camera.getPosition(), current_frame);
+        chunk_manager.update(current_frame);
 
         glClearColor(Constants::Colors::FOG[0],
                      Constants::Colors::FOG[1],
