@@ -2,6 +2,7 @@
 
 #include "Camera.h"
 #include "ChunkPool.h"
+#include "Frustrum.h"
 #include "GlobalConstants.h"
 #include "ThreadPool.h"
 
@@ -132,12 +133,16 @@ void ChunkManager::update(glm::vec3 camera_pos, double curr_time) {
 }
 
 void ChunkManager::render(float current_frame) {
+
     glm::mat4 model = glm::mat4(1.0f);
     glm::mat3 normal_matrix = glm::mat3(glm::transpose(glm::inverse(model)));
+    glm::mat4 view = camera_.getViewMatrix();
+    glm::mat4 vp_matrix = Constants::Matrices::PROJECTION * view;
+    Frustrum frustrum = Frustrum(vp_matrix);
 
     shader_.use();
     shader_.setMat4("projection", Constants::Matrices::PROJECTION);
-    shader_.setMat4("view", camera_.getViewMatrix());
+    shader_.setMat4("view", view);
     shader_.setMat4("model", model);
     shader_.setMat3("normalMatrix", normal_matrix);
 
@@ -150,8 +155,23 @@ void ChunkManager::render(float current_frame) {
 
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 
-    for (const auto& chunk_pair : active_chunks_) {
-        chunk_pair.second->draw(shader_);
+    for (const auto& [key, chunk]: active_chunks_) {
+        auto [x, z] = chunkKeyToPos(key);
+        glm::vec3 center(
+            (x + 0.5f) * Constants::Chunks::CHUNK_SIZE,
+            MAX_HEIGHT * 0.5f,
+            (z + 0.5f) * Constants::Chunks::CHUNK_SIZE
+        );
+
+        glm::vec3 extents(
+            Constants::Chunks::CHUNK_SIZE * 0.5f,
+            MAX_HEIGHT * 0.5f,
+            Constants::Chunks::CHUNK_SIZE * 0.5f
+        );
+
+        if (frustrum.isInside(center, extents)) {
+            chunk->draw(shader_);
+        }
     }
     glBindVertexArray(0);
 }

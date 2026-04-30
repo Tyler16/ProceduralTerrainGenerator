@@ -37,7 +37,9 @@ add_executable(ProceduralTerrainGenerator
     src/Chunk.cpp
     src/ChunkManager.cpp
     src/ChunkPool.cpp
+    src/Frustrum.cpp
     src/HeightGenerator.cpp
+    src/Plane.cpp
     src/Shader.cpp
     src/ShaderProgram.cpp
     src/Skybox.cpp
